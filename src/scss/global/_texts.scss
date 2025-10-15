@@ -1,0 +1,104 @@
+.big-title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 80px;
+  line-height: 100%;
+  text-transform: uppercase;
+  @media screen and (max-width: 900px) {
+    font-size: 54px
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 38px
+  }
+}
+
+.title {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 48px;
+  line-height: 100%;
+  text-transform: uppercase;
+  @media screen and (max-width: 900px) {
+    font-size: 32px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 24px;
+  }
+}
+
+.sub-title{
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 26px;
+  line-height: 120%;
+  color: rgba(0, 0, 0,1);
+  @media screen and (max-width: 900px) {
+    font-size: 18px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+  }
+}
+.description{
+  font-family: var(--font-family);
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 120%;
+  @media screen and (max-width: 600px) {
+    font-size: 16px;
+    line-height: 120% !important;
+  }
+}
+
+.text-white {
+  color: var(--ffffff);
+
+  span {
+    color: var(--eb0e54);
+  }
+}
+
+.text-dark {
+  color: rgba(0, 0, 0, 1);
+
+  span {
+    color: var(--eb0e54);
+  }
+}
+.text-grey {
+  color: #bfbfbf;
+  span {
+    color: var(--eb0e54);
+  }
+}
+.text-grey {
+  color: #959ba8;
+  span {
+    color: var(--eb0e54);
+  }
+}
+
+.text-22 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 22px;
+  line-height: 140%;
+  @media screen and (max-width: 900px) {
+    font-size: 16px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 14px;
+  }
+}
+.text-32 {
+  font-family: var(--font-family);
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 120%;
+  @media screen and (max-width: 900px) {
+    font-size: 24px;
+  }
+  @media screen and (max-width: 600px) {
+    font-size: 20px;
+  }
+}

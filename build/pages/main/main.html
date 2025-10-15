@@ -1,0 +1,1326 @@
+<!-- MAINPAGE -->
+<section class="mt-4 md:mt-2 xl:mt-3 mb-10 xl:mb-[54px] swiper-container" id="fBlockSlider">
+    <div class="swiper container overflow-visible mt-4"
+        data-slider-spv="1"
+        data-slider-md-spv="1"
+        data-slider-xl-spv="1"
+        data-slider-effect="fade"
+        data-slider-can-change-from-doc="true"
+        data-remove-native-controls="true"
+    >
+        <div class="swiper-wrapper">
+            <div  class=" swiper-slide bg-bg-white">
+                 <div class="grid gap-5 md:gap-6 xl:gap-[30px] col-span-1 mx-auto xl:grid-cols-[auto_568px] grid-rows-" >
+                    <div class="relative xl:col-start-1">
+                        <div class="w-[462px] h-[335px] xl:w-[537px] xl:h-[389px] bg-mcg-b absolute top-[23px] -left-[225px] md:-left-[191px] md:-top-[27px] xl:-top-2 xl:-left-[143px] -z-10"></div>
+                        <h1 class="text-mobh1 md:text-deskh2 xl:text-deskh1 xl:max-w-[510px] xl:pt-[50px]">Дарим 10 000 бонусов всем новым пациентам</h1>
+                    </div>
+                     <div class="text-body3 md:text-body1 text-text-d md:row-start-3 xl:row-start-2 xl:col-start-1 xl:max-w-[510px]">
+                         <p>Бонусы можно потратить на оплату лечения. <br>
+                         1 бонус = 1 рубль
+                        </p>
+                         <ul>
+                            <li>Бесплатный осмотр, консультация и диагностика</li>
+                            <li>
+                            КТ с ИИ анализом&nbsp;</li>
+                            <li>
+                            Честный и прозрачный&nbsp;план лечения</li>
+                        </ul>
+                     </div>
+                     <div class="mx-auto max-w-[488px] xl:max-w-[586px] relative my-auto xl:col-start-2 xl:row-span-3">
+                        <div class="hidden md:block">
+                            <div class="!hidden swiper-controls absolute top-3 right-3 xl:top-4 z-10">
+                                <button class="but prev">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
+                                    </svg>
+                                </button>
+                                <div class="pagination swiper-pagination-fraction swiper-pagination-horizontal">
+                                    <span class="swiper-pagination-current text-text-d px-[4.5px]">01</span>
+                                    <span>|</span>
+                                    <span class="swiper-pagination-total text-text-at px-[4.5px]">03</span>
+                                </div>
+                                <button class="but next">
+                                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z"/>
+                                    </svg>
+                                </button>
+                            </div>
+                        </div>
+                        <div
+                            class="text-deskh3 xl:text-deskh2 p-3 rounded-lg rounded-tr-none bg-mcg-salat w-fit text-mcg-pg absolute right-0 -bottom-2 md:bottom-0 md:-left-10 xl:right-auto xl:-left-[23px] xl:bottom-10">
+                            от 79 000 рублей
+                        </div>
+                        <img class="aspect-[351/234] w-full object-cover object-top" src="/img/mainpage/firstsec.jpg" alt="">
+                     </div>
+                     <div class="gap-3 md:flex items-center relative z-10 xl:col-start-1 xl:max-w-[510px] xl:h-fit xl:pb-[50px]">
+                         <a href="/" class="button button-main button-main--small-on-tab mb-3 md:mb-0" data-modal="formModalSimple">
+                             <span>Записаться</span>
+                         </a>
+                         <a href="/" class="button button-main button-main--secondary button-main--small-on-tab ">
+                             <span>Подробнее</span>
+                         </a>
+                     </div>
+                 </div>
+            </div>
+        </div>
+        <div class="swiper-sub-pug pt-5 md:pt-6 xl:pt-3 !hidden">
+        </div>
+    </div>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            var slides = document.querySelectorAll("#fBlockSlider .swiper-slide");
+            var slidesCount = slides.length;
+            var subPag = document.querySelector("#fBlockSlider .swiper-sub-pug");
+            var controls = document.querySelectorAll("#fBlockSlider .swiper-controls");
+
+            if(slidesCount < 2){
+                subPag.remove()
+                controls.remove()
+            } else {
+                controls.forEach(
+                    (el, i) => {
+                        var fraction = el.querySelector(".swiper-pagination-current")
+                        var fractionTotal = el.querySelector(".swiper-pagination-total");
+                        var butPrev = el.querySelector(".prev");
+                        var butNext = el.querySelector(".next");
+
+                        el.classList.remove('!hidden');
+                        if(slidesCount < 10) {
+                            fractionTotal.textContent = `0${slidesCount}`
+                        } else {
+                            fractionTotal.textContent = `${slidesCount}`
+                        }
+                        if(i < 9) {
+                            fraction.textContent = `0${i + 1}`;
+                        } else {
+                            fraction.textContent = `${i + 1}`;
+                        }
+
+                        if(i > 0) {
+                            butPrev.addEventListener('click', function() {
+                                if(changeCurrentSlideFromClick.fBlockSlider){
+                                    changeCurrentSlideFromClick.fBlockSlider(i - 1)
+                                }
+                            })
+                        } else {
+                            butPrev.classList.add('swiper-button-disabled')
+                            butPrev.setAttribute('disabled', 'true')
+
+                        }
+
+                        if(i < slidesCount - 1) {
+                            butNext.addEventListener('click', function() {
+                                if(changeCurrentSlideFromClick.fBlockSlider){
+                                    changeCurrentSlideFromClick.fBlockSlider(i + 1)
+                                }
+                            })
+                           
+                        } else {
+                            butNext.classList.add('swiper-button-disabled')
+                            butNext.setAttribute('disabled', 'true')
+                        }
+                    }
+                )
+ 
+                for (let a = 0; a < slidesCount; a++) {
+                    const pag = document.createElement('a')
+                    if(a === 0){
+                        pag.classList.add('current')
+                    }
+                    subPag.appendChild(pag)
+                }
+
+                var pags = subPag.querySelectorAll('a')
+
+                pags.forEach((el, i) => {
+                    el.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        pags.forEach(el => el.classList.remove('current'))
+                        el.classList.add('current')
+                        if(changeCurrentSlideFromClick.fBlockSlider){
+                            changeCurrentSlideFromClick.fBlockSlider(i)
+                        }
+                    })
+                })
+
+                subPag.classList.remove('!hidden')
+            }
+        })
+    </script>
+</section>
+<section class="mt-4 md:mt-2 xl:mt-3 mb-10 xl:mb-[54px] md:container">
+    <div class="px-2 md:px-[30px] md:pr-16 xl:pr-[59px] pt-4 md:pt-[30px] xl:pt-0 before:absolute before:top-0 before:left-0 before:right-0 before:bottom-0 xl:before:top-16 before:bg-mcg-pg relative before:rounded-[20px]">
+        <div class="flex flex-col gap-3 relative items-center xl:flex-row xl:items-end xl:justify-between">
+            <div class="flex flex-col gap-5 xl:gap-6 relative text-bg-white xl:max-w-[620px] xl:py-[30px] xl:mt-16">
+                <h2 class="heading2">Мы в социальных сетях</h2>
+                <p class="text-body3">Присоединяйтесь к нам в социальных сетях</p>
+                <div>
+                    <div class="mb-3 grid grid-cols-2 md:grid-cols-4 gap-2 md:gap-3">
+                        <a href="https://t.me/DentalWay_ru" class="w-full button button-main button-main--secondary button-main--secondary--social">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M2.8922 9.06331C7.82955 6.89124 14.2189 4.24304 15.1008 3.87651C17.4143 2.91716 18.1242 3.10102 17.7702 5.22555C17.5161 6.75256 16.7826 11.8082 16.1981 14.9549C15.8512 16.8209 15.0729 17.0421 13.8492 16.2348C13.2607 15.8463 10.2904 13.882 9.6457 13.4208C9.05721 13.0005 8.24558 12.4949 9.26346 11.499C9.62566 11.1442 12.0001 8.8771 13.85 7.11242C14.0924 6.88063 13.7879 6.49996 13.5082 6.68578C11.0148 8.33929 7.5577 10.6343 7.1177 10.9333C6.453 11.3847 5.81462 11.5917 4.66867 11.2625C3.80283 11.0138 2.95702 10.7172 2.62781 10.6041C1.36008 10.1688 1.66101 9.60505 2.8922 9.06331Z" />
+                            </svg>
+                            <span>Telegram</span>
+                        </a>   
+                        <a href="https://vk.com/dentalway/" class="w-full button button-main button-main--secondary button-main--secondary--social">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10.6862 15.1668C5.02817 15.1668 1.80097 11.288 1.6665 4.8335H4.50066C4.59376 9.5709 6.68314 11.5776 8.33813 11.9913V4.8335H11.0069V8.91923C12.6412 8.74339 14.358 6.88155 14.9373 4.8335H17.606C17.1613 7.35736 15.2994 9.2192 13.9754 9.98463C15.2994 10.6053 17.4199 12.2292 18.2268 15.1668H15.2891C14.6581 13.2015 13.086 11.681 11.0069 11.4741V15.1668H10.6862Z" />
+                            </svg>
+                            <span>Vkontakte</span>
+                        </a>   
+                        <a href="https://www.youtube.com/channel/UCyEHaayFg-9GXlmf5wKFMsQ" class="w-full button button-main button-main--secondary button-main--secondary--social">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M16.3458 2.65344C13.3425 2.44844 6.65333 2.44927 3.65417 2.65344C0.406667 2.8751 0.0241667 4.83677 0 10.0001C0.0241667 15.1543 0.403333 17.1243 3.65417 17.3468C6.65417 17.5509 13.3425 17.5518 16.3458 17.3468C19.5933 17.1251 19.9758 15.1634 20 10.0001C19.9758 4.84594 19.5967 2.87594 16.3458 2.65344V2.65344ZM7.5 13.3334V6.66677L14.1667 9.99427L7.5 13.3334V13.3334Z" />
+                            </svg>
+                            <span>Youtube</span>
+                        </a>   
+                        <a href="" class="w-full button button-main button-main--secondary button-main--secondary--social">
+                            <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M1.40625 1.40602C0 2.81178 0 5.07446 0 9.60011V10.3999C0 14.9255 0 17.1882 1.40625 18.594C2.81158 20 5.07416 20 9.59961 20H10.4004C14.9258 20 17.1884 20 18.5938 18.594C20 17.1882 20 14.9255 20 10.3999V9.60011C20 5.07446 20 2.81178 18.5938 1.40602C17.1884 0 14.9258 0 10.4004 0H9.59961C5.07416 0 2.81158 0 1.40625 1.40602ZM7.91909 8.61718C7.64515 9.02869 7.49942 9.51217 7.50033 10.0065H7.501C7.50205 10.6685 7.76584 11.303 8.23445 11.7707C8.70305 12.2384 9.33817 12.5011 10.0004 12.5011H10.005C10.4995 12.5002 10.9825 12.3527 11.3932 12.0774C11.8038 11.802 12.1235 11.411 12.3118 10.954C12.5002 10.497 12.5488 9.99436 12.4514 9.50972C12.3541 9.02509 12.1151 8.5802 11.7649 8.23131C11.4146 7.88243 10.9687 7.64522 10.4835 7.54969C9.9984 7.45415 9.49583 7.50457 9.03936 7.69459C8.58289 7.8846 8.19303 8.20566 7.91909 8.61718ZM7.27485 7.28069C7.99564 6.559 8.9736 6.153 9.99374 6.15195H10.0017C11.0218 6.153 11.9998 6.559 12.7206 7.28069C13.4414 8.00239 13.846 8.98069 13.8454 10.0005C13.8449 11.0204 13.4393 11.9982 12.7178 12.7192C11.9962 13.4401 11.0178 13.8451 9.99771 13.8451C8.97758 13.8451 7.99919 13.4401 7.27766 12.7192C6.55613 11.9982 6.15052 11.0204 6.14999 10.0005C6.14946 8.98069 6.55407 8.00239 7.27485 7.28069ZM13.4954 5.24538C13.6432 5.14619 13.8171 5.09304 13.9951 5.09264C14.1133 5.09238 14.2304 5.1154 14.3397 5.16037C14.449 5.20535 14.5483 5.2714 14.6321 5.35477C14.7158 5.43813 14.7824 5.53717 14.8278 5.64624C14.8733 5.7553 14.8968 5.87225 14.8971 5.9904C14.8975 6.16836 14.8451 6.34243 14.7465 6.49061C14.648 6.63879 14.5077 6.75442 14.3433 6.82288C14.179 6.89134 13.9981 6.90956 13.8235 6.87523C13.6488 6.8409 13.4882 6.75556 13.3621 6.63001C13.236 6.50445 13.1499 6.34432 13.1148 6.16987C13.0797 5.99541 13.0971 5.81446 13.1648 5.64991C13.2326 5.48535 13.3476 5.34457 13.4954 5.24538ZM5.59104 15.8552C5.85595 15.9565 6.2533 16.0783 6.98178 16.1101L6.98443 16.1054C7.65332 16.1346 7.92617 16.1445 9.20565 16.1445H10.0063C12.009 16.1412 12.2461 16.1326 13.0368 16.0955C13.7653 16.0604 14.1627 15.9379 14.4276 15.8346C14.7508 15.7094 15.0443 15.5178 15.2891 15.2723C15.5338 15.0268 15.7245 14.7328 15.8488 14.4092C15.9508 14.1444 16.0719 13.7471 16.1037 13.0189C16.1388 12.2284 16.1455 11.9914 16.1421 9.98927C16.1388 7.98719 16.1302 7.75017 16.0925 6.95967C16.058 6.23139 15.9355 5.83416 15.8322 5.56933C15.7069 5.24606 15.5152 4.95262 15.2695 4.70791C15.0238 4.46321 14.7295 4.27266 14.4057 4.14854C14.1408 4.04658 13.7434 3.92542 13.015 3.89365C12.2236 3.85591 11.9858 3.8526 9.9838 3.85591C7.9818 3.85922 7.74471 3.86716 6.95397 3.9049C6.22549 3.93999 5.82813 4.06247 5.56323 4.16575C5.23985 4.29205 4.94657 4.48475 4.70234 4.73142C4.45811 4.9781 4.26835 5.27324 4.14533 5.5978C4.04401 5.86262 3.92149 6.25986 3.89036 6.98813C3.85592 7.7793 3.8493 8.01566 3.85261 10.0177C3.85592 12.0198 3.86453 12.2568 3.90162 13.0473C3.93606 13.7756 4.0599 14.1729 4.16255 14.4377C4.28848 14.7606 4.48065 15.0535 4.72667 15.2976C4.9727 15.5418 5.26715 15.7317 5.59104 15.8552ZM6.89702 2.55098C7.69636 2.51258 7.95199 2.50397 9.98844 2.5V2.50397H10.7964C12.1143 2.50397 12.401 2.5139 13.0805 2.54436C13.8785 2.57879 14.4236 2.70458 14.9011 2.88929C15.3994 3.08127 15.852 3.37528 16.23 3.75244C16.608 4.1296 16.9029 4.58159 17.0958 5.0794C17.2826 5.55609 17.4104 6.09964 17.4481 6.89876C17.4859 7.69787 17.4951 7.95342 17.4991 9.98927C17.5031 12.0251 17.4945 12.2833 17.46 13.0811C17.4256 13.8789 17.2998 14.4244 17.115 14.9011C16.9229 15.3994 16.6287 15.8521 16.2513 16.23C15.8739 16.608 15.4217 16.9029 14.9236 17.0959C14.4468 17.2819 13.9044 17.4097 13.1044 17.4481C12.3044 17.4865 12.0474 17.4951 10.0116 17.4991C7.97584 17.503 7.71822 17.4951 6.9202 17.46C6.12217 17.4249 5.57647 17.2998 5.09965 17.1151C4.60123 16.923 4.14848 16.6288 3.77042 16.2516C3.39236 15.8743 3.09733 15.4222 2.90426 14.9243C2.7175 14.4476 2.59035 13.9054 2.55194 13.1056C2.51353 12.3058 2.50492 12.0509 2.50094 10.0144C2.49697 7.97792 2.50492 7.7217 2.54002 6.92325C2.57512 6.1248 2.70028 5.57992 2.88505 5.10257C3.07686 4.60335 3.37104 4.14976 3.74868 3.77098C4.12632 3.3922 4.57905 3.09661 5.07779 2.9032C5.55396 2.71649 6.09767 2.58938 6.89702 2.55098Z" />
+                            </svg>
+                            <span>Instagram*</span>
+                        </a>   
+                    </div>
+                    <p class="text-body4 text-mcg-bs">*Социальная сеть Instagram принадлежит компании Meta, которая запрещена на территории РФ</p>
+                </div>
+            </div>
+            <div class="px-[25px] md:px-0">
+                <img src="/img/socials-back.webp" width="450" height="325" alt="" class=" block">
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mb-10 xl:mb-[54px] sst">
+    <div class="container">
+        <div class="flex flex-col gap-4 mb-5 md:flex-row justify-between md:items-center">
+            <h2 class="text-mobh1 md:text-deskh2 xl:text-deskh1">Наши услуги</h2>
+            <div class="tabs w-fit sst-tabs">
+                <a href="/" class="tab selected">По направлению</a>
+                <a href="/" class="tab">По проблеме</a>
+            </div>
+        </div>
+        <div class="sst-slides">
+            <div id="serviceSlider" class="relative md:pt-[59px] selected">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide service-slide">
+                            <div class="service-slide__header">
+                                <h4 class="service-slide__title">Диагностика зубов и десен</h4>
+                                <span class="service-slide__icon">
+                                    <img class="w-[34px] h-[35px]" src="/img/svg/services/service1.svg" alt="">
+                                </span>
+                            </div>
+                            <ul class="service-slide__body">
+                                <li class="service-slide__body-el"><a href="/"><span>Компьтерная 3Д томография зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Рентген-диагностика состояния зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Прицельный снимок</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Искусственный интеллект Diagnocat</span></a></li>
+                            </ul>
+                            <div class="service-slide__footer flex justify-center">
+                                <a href="/" class="button button-link !text-but14m"> 
+                                    <span>Еще услуги</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide service-slide">
+                            <div class="service-slide__header">
+                                <h4 class="service-slide__title">Диагностика зубов и десен</h4>
+                                <span class="service-slide__icon">
+                                    <img class="w-[34px] h-[35px]" src="/img/svg/services/service1.svg" alt="">
+                                </span>
+                            </div>
+                            <ul class="service-slide__body">
+                                <li class="service-slide__body-el"><a href="/"><span>Компьтерная 3Д томография зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Рентген-диагностика состояния зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Прицельный снимок</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Искусственный интеллект Diagnocat</span></a></li>
+                            </ul>
+                            <div class="service-slide__footer flex justify-center">
+                                <a href="/" class="button button-link"> 
+                                    <span>Еще услуги</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide service-slide">
+                            <div class="service-slide__header">
+                                <h4 class="service-slide__title">Диагностика зубов и десен</h4>
+                                <span class="service-slide__icon">
+                                    <img class="w-[34px] h-[35px]" src="/img/svg/services/service1.svg" alt="">
+                                </span>
+                            </div>
+                            <ul class="service-slide__body">
+                                <li class="service-slide__body-el"><a href="/"><span>Компьтерная 3Д томография зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Рентген-диагностика состояния зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Прицельный снимок</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Искусственный интеллект Diagnocat</span></a></li>
+                            </ul>
+                            <div class="service-slide__footer flex justify-center">
+                                <a href="/" class="button button-link"> 
+                                    <span>Еще услуги</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide service-slide">
+                            <div class="service-slide__header">
+                                <h4 class="service-slide__title">Диагностика зубов и десен</h4>
+                                <span class="service-slide__icon">
+                                    <img class="w-[34px] h-[35px]" src="/img/svg/services/service1.svg" alt="">
+                                </span>
+                            </div>
+                            <ul class="service-slide__body">
+                                <li class="service-slide__body-el"><a href="/"><span>Компьтерная 3Д томография зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Рентген-диагностика состояния зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Прицельный снимок</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Искусственный интеллект Diagnocat</span></a></li>
+                            </ul>
+                            <div class="service-slide__footer flex justify-center">
+                                <a href="/" class="button button-link--revers"> 
+                                    <span>Еще услуги</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-fit mx-auto mt-5 md:mt-0 md:mx-0 md:absolute top-0 right-0">
+                    <div class="swiper-controls">
+                        <button class="but prev">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
+                            </svg>
+                        </button>
+                        <div class="pagination">
+        
+                        </div>
+                        <button class="but next">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <a href="/" class="mt-6 button button-main button-main--small-on-tab md:w-fit ml-auto">
+                    <span>
+                        Смотреть цены
+                    </span>
+                </a>
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const swiper = new Swiper('#serviceSlider .swiper', {
+                            spaceBetween: 16,
+                            slidesPerView: 1,
+                            autoHeight: true,
+                            pagination: defaultFractionPag('#serviceSlider .swiper-controls .pagination'),
+                            navigation:{
+                                prevEl: '#serviceSlider .swiper-controls .prev',
+                                nextEl: '#serviceSlider .swiper-controls .next',
+                            },
+                            breakpoints: {
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                                1366: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 30,
+                                }
+                            }
+                        })
+                    })
+                </script>
+            </div>
+            <div id="serviceSlider2" class="relative md:pt-[59px]">
+                <div class="swiper">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide service-slide">
+                            <div class="service-slide__header">
+                                <h4 class="service-slide__title">Диагностика зубов и десен</h4>
+                                <span class="service-slide__icon">
+                                    <img class="w-[34px] h-[35px]" src="/img/svg/services/service1.svg" alt="">
+                                </span>
+                            </div>
+                            <ul class="service-slide__body">
+                                <li class="service-slide__body-el"><a href="/"><span>Компьтерная 3Д томография зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Рентген-диагностика состояния зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Прицельный снимок</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Искусственный интеллект Diagnocat</span></a></li>
+                            </ul>
+                            <div class="service-slide__footer flex justify-center">
+                                <a href="/" class="button button-link"> 
+                                    <span>Еще услуги</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide service-slide">
+                            <div class="service-slide__header">
+                                <h4 class="service-slide__title">Диагностика зубов и десен</h4>
+                                <span class="service-slide__icon">
+                                    <img class="w-[34px] h-[35px]" src="/img/svg/services/service1.svg" alt="">
+                                </span>
+                            </div>
+                            <ul class="service-slide__body">
+                                <li class="service-slide__body-el"><a href="/"><span>Компьтерная 3Д томография зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Рентген-диагностика состояния зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Прицельный снимок</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Искусственный интеллект Diagnocat</span></a></li>
+                            </ul>
+                            <div class="service-slide__footer flex justify-center">
+                                <a href="/" class="button button-link"> 
+                                    <span>Еще услуги</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide service-slide">
+                            <div class="service-slide__header">
+                                <h4 class="service-slide__title">Диагностика зубов и десен</h4>
+                                <span class="service-slide__icon">
+                                    <img class="w-[34px] h-[35px]" src="/img/svg/services/service1.svg" alt="">
+                                </span>
+                            </div>
+                            <ul class="service-slide__body">
+                                <li class="service-slide__body-el"><a href="/"><span>Компьтерная 3Д томография зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Рентген-диагностика состояния зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Прицельный снимок</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Искусственный интеллект Diagnocat</span></a></li>
+                            </ul>
+                            <div class="service-slide__footer flex justify-center">
+                                <a href="/" class="button button-link"> 
+                                    <span>Еще услуги</span>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="swiper-slide service-slide">
+                            <div class="service-slide__header">
+                                <h4 class="service-slide__title">Диагностика зубов и десен</h4>
+                                <span class="service-slide__icon">
+                                    <img class="w-[34px] h-[35px]" src="/img/svg/services/service1.svg" alt="">
+                                </span>
+                            </div>
+                            <ul class="service-slide__body">
+                                <li class="service-slide__body-el"><a href="/"><span>Компьтерная 3Д томография зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Рентген-диагностика состояния зубов</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Прицельный снимок</span></a></li>
+                                <li class="service-slide__body-el"><a href="/"><span>Искусственный интеллект Diagnocat</span></a></li>
+                            </ul>
+                            <div class="service-slide__footer flex justify-center">
+                                <a href="/" class="button button-link"> 
+                                    <span>Еще услуги</span>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-fit mx-auto mt-5 md:mt-0 md:mx-0 md:absolute top-0 right-0">
+                    <div class="swiper-controls">
+                        <button class="but prev">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
+                            </svg>
+                        </button>
+                        <div class="pagination">
+        
+                        </div>
+                        <button class="but next">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <a href="/" class="mt-6 button button-main button-main--small-on-tab md:w-fit ml-auto">
+                    <span>
+                        Смотреть цены
+                    </span>
+                </a>
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const swiper = new Swiper('#serviceSlider2 .swiper', {
+                            spaceBetween: 16,
+                            slidesPerView: 1,
+                            autoHeight: true,
+                            pagination: defaultFractionPag('#serviceSlider2 .swiper-controls .pagination'),
+                            navigation:{
+                                prevEl: '#serviceSlider2 .swiper-controls .prev',
+                                nextEl: '#serviceSlider2 .swiper-controls .next',
+                            },
+                            breakpoints: {
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                                1366: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 30,
+                                }
+                            }
+                        })
+                    })
+                </script>
+            </div>
+        </div>
+    </div>
+</section>
+<div class="mb-10 xl:mb-[54px]">
+    <div class="container !px-0 xl:flex xl:!pl-[68px]">
+        <div class="docavatar docavatar--big">
+            <img src="/img/mainpage/doc.jpg" alt="">
+        </div>
+        <div class="container relative xl:flex-1 mt-[15px] md:mt-[10px] :mr-0 xl:mt-0 xl:pt-[72px] pb-6 md:pb-[30px] xl:pb-[38px] xl:pl-[43px]">
+            <div class="decor bg-mcg-b absolute -top-[111px] bottom-0 -left-3 -right-3 -z-10 md:-left-[27px] md:-right-[27px] md:-top-[114px] xl:w-[200vw] xl:top-0 xl:right-auto xl:-left-[223px]">
+                            
+            </div>
+            <div class="py-3 mb-[27px] md:mb-6 xl:mb-9 text-body3 text-text-d relative xl:max-w-[762px] ml-auto">
+                <span class="bg-text-d h-[1px] absolute left-1/2 -translate-x-1/2 top-0  w-[265px]"></span>
+                Мы относимся к каждому зубу как к большой ценности для пациента, поэтому проводим полную диагностику и подбираем оптимальные решения под отдельные случаи. Представьте: то, что 2–3 года назад нужно было удалять, сегодня лечится и восстанавливается. Наши врачи могут устранить кисту на корне зуба или изготовить коронку с максимальной точностью, полностью сохранив здоровые нервные окончания. Мы используем томографы, микроскопы и компьютеры мирового уровня. Благодаря цифровым технологиям и постоянному обучению наши врачи решают проблемы, которые не разглядит большинство стоматологов. Приходите в DENTAL WAY и убедитесь: нам важен каждый зуб!
+                <span class="bg-text-d h-[1px] absolute left-1/2 -translate-x-1/2 bottom-0 w-[265px]"></span>
+                
+            </div>
+            <div>
+                <div class=" text-right text-text-d">
+                    <div class="mb-2 text-mobh2 md:text-deskh3">
+                        Тимофеев Дмитрий Евгеньевич
+                    </div>
+                    <div class="text-body3 md:text-body1">  
+                        Медицинский директор
+                    </div>
+                </div>
+                <a href="/" class="button button-main button-main--small-on-tab mt-5 md:mt-4 md:w-fit md:mr-auto xl:-mt-[9px]">
+                    <span>
+                        Написать директору
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<section class="container mb-10 xl:mb-[54px] relative">
+    <span
+        class="w-[314px] md:w-[567px] xl:w-[947px] bg-bg-beige absolute -top-6 -left-4 bottom-0 md:-left-[30px] md:top-[46px] xl:-left-[63px] -z-10"></span>
+    <div class=" relative pb-[98px] md:pb-[38px] xl:pb-[76px] swiper-container swiper-with-count" id="reasonsSlider">
+        <div class="mb-5  md:flex justify-between items-end">
+            <h2 class="text-mobh1 md:text-deskh2 xl:text-deskh1 md:max-w-[456px] xl:max-w-[717px]">6 причин доверить
+                лечение Dental Way</h2>
+            <div class="swiper-controls absolute left-1/2 bottom-[31px] -translate-x-1/2 md:static md:translate-x-0">
+                <button class="but prev">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z" />
+                    </svg>
+                </button>
+                <div class="pagination">
+
+                </div>
+                <button class="but next">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd"
+                            d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="swiper " >
+            <div class="swiper-wrapper">
+                <div class="swiper-slide ">
+                    <img class="aspect-[351/200] rounded-[20px] w-full object-cover mb-3"
+                        src="/img/mainpage/reason1.jpg" alt="">
+                    <div>
+                        <h4 class="mb-3 xl:mb-4 text-mobh2 xl:text-deskSubtitle">Довольные постоянные клиенты</h4>
+                        <p class="text-text-d tetx-body3">Работаем с 2011 года, у нас проходят лечение 40 000 пациентов
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <img class="aspect-[351/200] rounded-[20px] w-full object-cover mb-3"
+                        src="/img/mainpage/reason1.jpg" alt="">
+                    <div>
+                        <h4 class="mb-3 xl:mb-4 text-mobh2 xl:text-deskSubtitle">Довольные постоянные клиенты</h4>
+                        <p class="text-text-d tetx-body3">Работаем с 2011 года, у нас проходят лечение 40 000 пациентов
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <img class="aspect-[351/200] rounded-[20px] w-full object-cover mb-3"
+                        src="/img/mainpage/reason1.jpg" alt="">
+                    <div>
+                        <h4 class="mb-3 xl:mb-4 text-mobh2 xl:text-deskSubtitle">Довольные постоянные клиенты</h4>
+                        <p class="text-text-d tetx-body3">Работаем с 2011 года, у нас проходят лечение 40 000 пациентов
+                        </p>
+                    </div>
+                </div>
+                <div class="swiper-slide ">
+                    <img class="aspect-[351/200] rounded-[20px] w-full object-cover mb-3"
+                        src="/img/mainpage/reason1.jpg" alt="">
+                    <div>
+                        <h4 class="mb-3 xl:mb-4 text-mobh2 xl:text-deskSubtitle">Довольные постоянные клиенты</h4>
+                        <p class="text-text-d tetx-body3">Работаем с 2011 года, у нас проходят лечение 40 000 пациентов
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<section class="mb-10 xl:mb-[54px]">
+    <div class="container">
+        <h2 class=" text-mobh1 md:text-deskh2 xl:text-deskh1 mb-5 md:mb-10">Отзывы</h2>
+        <div class=" flex items-center gap-4 no-scrollbar w-full overflow-auto md:flex-wrap md:w-fit gap-x-5 gap-y-5 md:justify-center mb-6">
+            <div class="rate">
+                <div class="rate__header">
+                    <svg viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.112 2.80342C18.5188 2.51854 19.0034 2.36572 19.5 2.36572C19.9966 2.36572 20.4812 2.51854 20.888 2.80342C21.2892 3.08445 21.5956 3.48056 21.7668 3.93922L25.0271 12.1493L25.0369 12.1746C25.0399 12.1827 25.0452 12.1898 25.0521 12.1949C25.0591 12.2001 25.0674 12.2031 25.076 12.2036L25.0834 12.204L33.8412 12.7681C36.1146 12.9157 36.8915 15.7616 35.237 17.137L35.236 17.1378L28.5286 22.7323L28.5247 22.7355C28.5096 22.748 28.4984 22.7645 28.4922 22.7831C28.4863 22.8012 28.4854 22.8206 28.4897 22.8391L28.4901 22.8406L30.6556 31.3542C31.1799 33.4239 28.945 35.2878 27.0008 34.0615L26.9979 34.0596L19.5166 29.3096C19.5119 29.3065 19.5057 29.3045 19.5 29.3045C19.4944 29.3045 19.4888 29.3061 19.4841 29.3091L19.4822 29.3103L12.5227 33.7175L12.5216 33.7182C10.3889 35.0742 7.92557 33.0127 8.50779 30.7306L10.51 22.8406L10.5103 22.8393C10.5146 22.8207 10.5138 22.8012 10.5078 22.7831C10.5017 22.7645 10.4904 22.748 10.4753 22.7355L10.4714 22.7323L3.76397 17.1378L3.76301 17.137C2.10848 15.7615 2.88481 12.9158 5.15822 12.7682L13.924 12.2036C13.9326 12.2031 13.9409 12.2001 13.9479 12.1949C13.9549 12.1898 13.9602 12.1827 13.9632 12.1746L13.9729 12.1493L17.2332 3.93922C17.4044 3.48056 17.7108 3.08445 18.112 2.80342Z" fill="#0A0A0A"></path>
+                    </svg>
+                    <span class="rate__count">
+                        5.0
+                    </span>
+                </div>
+                <div class="rate__logo">
+                    <svg viewBox="0 0 130 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_288_23840)">
+                            <path d="M123.943 32.2179C126.493 32.2179 128.299 31.7642 129.646 30.7868V26.3538C128.264 27.2962 126.599 27.8896 124.261 27.8896C120.329 27.8896 118.7 24.8878 118.7 20.1406C118.7 15.1491 120.684 12.601 124.297 12.601C126.422 12.601 128.512 13.334 129.61 14.0321V9.42454C128.441 8.79624 126.422 8.34247 123.659 8.34247C116.61 8.34247 112.962 13.334 112.962 20.3151C112.997 27.9594 116.575 32.2179 123.943 32.2179ZM89.4766 30.1934V25.7604C87.7763 26.9123 84.8717 27.9245 82.215 27.9245C78.1769 27.9245 76.6537 26.0396 76.4057 22.2H89.7245V19.3378C89.7245 11.3444 86.1469 8.34247 80.6564 8.34247C73.9262 8.34247 70.7382 13.4038 70.7382 20.35C70.7382 28.3434 74.7409 32.2179 81.7545 32.2179C85.2613 32.2179 87.8472 31.2755 89.4766 30.1934ZM38.9289 8.76134V17.8368H31.561V8.76134H26.0352V31.7642H31.561V22.1651H38.9289V31.7642H44.4548V8.76134H38.9289ZM69.3567 27.4359H66.9125V8.76134H50.8308V10.7161C50.8308 16.3359 50.4766 23.5962 48.5283 27.4359H46.7572V37H51.858V31.7642H64.2204V37H69.3213V27.4359H69.3567ZM107.081 31.7642H113.351L104.496 19.3727L112.289 8.76134H106.727L98.9343 19.3727V8.76134H93.4085V31.7642H98.9343V20.4547L107.081 31.7642ZM80.5147 12.601C83.2422 12.601 84.0924 14.8349 84.0924 17.7321V18.1859H76.4057C76.5474 14.5208 77.8935 12.601 80.5147 12.601ZM61.3867 27.4359H53.5937C55.1169 23.9802 55.542 17.6972 55.542 13.7179V13.0198H61.3867V27.4359Z" fill="black"></path>
+                            <path d="M21.4305 31.7642H15.7984V4.2934H13.2834C8.67847 4.2934 6.26976 6.56226 6.26976 9.94811C6.26976 13.7877 7.93461 15.5679 11.3706 17.8368L14.2044 19.7217L6.05722 31.7642H0L7.33243 21.0132C3.11717 18.0462 0.743869 15.1491 0.743869 10.2623C0.743869 4.15377 5.0654 0 13.248 0H21.3951V31.7642H21.4305Z" fill="#FC3F1D"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_288_23840">
+                                <rect width="130" height="37" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <svg class="rate__line" viewBox="0 0 226 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.50001 0C4.08173 0 0.470174 3.59384 0.782634 8.00106C4.90334 66.1233 53.5695 112 113 112C172.43 112 221.097 66.1233 225.217 8.00105C225.53 3.59384 221.918 0 217.5 0H185.829C181.41 0 177.881 3.59953 177.338 7.98426C173.387 39.8639 146.087 64.5406 113 64.5406C79.9134 64.5406 52.6088 39.8638 48.6575 7.98426C48.1141 3.59953 44.5846 0 40.1663 0H8.50001Z" fill="#EBF4F4"></path>
+                </svg>
+            </div>
+            <div class="rate">
+                <div class="rate__header">
+                    <svg viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.112 2.80342C18.5188 2.51854 19.0034 2.36572 19.5 2.36572C19.9966 2.36572 20.4812 2.51854 20.888 2.80342C21.2892 3.08445 21.5956 3.48056 21.7668 3.93922L25.0271 12.1493L25.0369 12.1746C25.0399 12.1827 25.0452 12.1898 25.0521 12.1949C25.0591 12.2001 25.0674 12.2031 25.076 12.2036L25.0834 12.204L33.8412 12.7681C36.1146 12.9157 36.8915 15.7616 35.237 17.137L35.236 17.1378L28.5286 22.7323L28.5247 22.7355C28.5096 22.748 28.4984 22.7645 28.4922 22.7831C28.4863 22.8012 28.4854 22.8206 28.4897 22.8391L28.4901 22.8406L30.6556 31.3542C31.1799 33.4239 28.945 35.2878 27.0008 34.0615L26.9979 34.0596L19.5166 29.3096C19.5119 29.3065 19.5057 29.3045 19.5 29.3045C19.4944 29.3045 19.4888 29.3061 19.4841 29.3091L19.4822 29.3103L12.5227 33.7175L12.5216 33.7182C10.3889 35.0742 7.92557 33.0127 8.50779 30.7306L10.51 22.8406L10.5103 22.8393C10.5146 22.8207 10.5138 22.8012 10.5078 22.7831C10.5017 22.7645 10.4904 22.748 10.4753 22.7355L10.4714 22.7323L3.76397 17.1378L3.76301 17.137C2.10848 15.7615 2.88481 12.9158 5.15822 12.7682L13.924 12.2036C13.9326 12.2031 13.9409 12.2001 13.9479 12.1949C13.9549 12.1898 13.9602 12.1827 13.9632 12.1746L13.9729 12.1493L17.2332 3.93922C17.4044 3.48056 17.7108 3.08445 18.112 2.80342Z" fill="#0A0A0A"></path>
+                    </svg>
+                    <span class="rate__count">
+                        5.0
+                    </span>
+                </div>
+                <div class="rate__logo">
+                    <svg viewBox="0 0 130 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_288_23840)">
+                            <path d="M123.943 32.2179C126.493 32.2179 128.299 31.7642 129.646 30.7868V26.3538C128.264 27.2962 126.599 27.8896 124.261 27.8896C120.329 27.8896 118.7 24.8878 118.7 20.1406C118.7 15.1491 120.684 12.601 124.297 12.601C126.422 12.601 128.512 13.334 129.61 14.0321V9.42454C128.441 8.79624 126.422 8.34247 123.659 8.34247C116.61 8.34247 112.962 13.334 112.962 20.3151C112.997 27.9594 116.575 32.2179 123.943 32.2179ZM89.4766 30.1934V25.7604C87.7763 26.9123 84.8717 27.9245 82.215 27.9245C78.1769 27.9245 76.6537 26.0396 76.4057 22.2H89.7245V19.3378C89.7245 11.3444 86.1469 8.34247 80.6564 8.34247C73.9262 8.34247 70.7382 13.4038 70.7382 20.35C70.7382 28.3434 74.7409 32.2179 81.7545 32.2179C85.2613 32.2179 87.8472 31.2755 89.4766 30.1934ZM38.9289 8.76134V17.8368H31.561V8.76134H26.0352V31.7642H31.561V22.1651H38.9289V31.7642H44.4548V8.76134H38.9289ZM69.3567 27.4359H66.9125V8.76134H50.8308V10.7161C50.8308 16.3359 50.4766 23.5962 48.5283 27.4359H46.7572V37H51.858V31.7642H64.2204V37H69.3213V27.4359H69.3567ZM107.081 31.7642H113.351L104.496 19.3727L112.289 8.76134H106.727L98.9343 19.3727V8.76134H93.4085V31.7642H98.9343V20.4547L107.081 31.7642ZM80.5147 12.601C83.2422 12.601 84.0924 14.8349 84.0924 17.7321V18.1859H76.4057C76.5474 14.5208 77.8935 12.601 80.5147 12.601ZM61.3867 27.4359H53.5937C55.1169 23.9802 55.542 17.6972 55.542 13.7179V13.0198H61.3867V27.4359Z" fill="black"></path>
+                            <path d="M21.4305 31.7642H15.7984V4.2934H13.2834C8.67847 4.2934 6.26976 6.56226 6.26976 9.94811C6.26976 13.7877 7.93461 15.5679 11.3706 17.8368L14.2044 19.7217L6.05722 31.7642H0L7.33243 21.0132C3.11717 18.0462 0.743869 15.1491 0.743869 10.2623C0.743869 4.15377 5.0654 0 13.248 0H21.3951V31.7642H21.4305Z" fill="#FC3F1D"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_288_23840">
+                                <rect width="130" height="37" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <svg class="rate__line" viewBox="0 0 226 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.50001 0C4.08173 0 0.470174 3.59384 0.782634 8.00106C4.90334 66.1233 53.5695 112 113 112C172.43 112 221.097 66.1233 225.217 8.00105C225.53 3.59384 221.918 0 217.5 0H185.829C181.41 0 177.881 3.59953 177.338 7.98426C173.387 39.8639 146.087 64.5406 113 64.5406C79.9134 64.5406 52.6088 39.8638 48.6575 7.98426C48.1141 3.59953 44.5846 0 40.1663 0H8.50001Z" fill="#EBF4F4"></path>
+                </svg>
+            </div>
+            <div class="rate">
+                <div class="rate__header">
+                    <svg viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.112 2.80342C18.5188 2.51854 19.0034 2.36572 19.5 2.36572C19.9966 2.36572 20.4812 2.51854 20.888 2.80342C21.2892 3.08445 21.5956 3.48056 21.7668 3.93922L25.0271 12.1493L25.0369 12.1746C25.0399 12.1827 25.0452 12.1898 25.0521 12.1949C25.0591 12.2001 25.0674 12.2031 25.076 12.2036L25.0834 12.204L33.8412 12.7681C36.1146 12.9157 36.8915 15.7616 35.237 17.137L35.236 17.1378L28.5286 22.7323L28.5247 22.7355C28.5096 22.748 28.4984 22.7645 28.4922 22.7831C28.4863 22.8012 28.4854 22.8206 28.4897 22.8391L28.4901 22.8406L30.6556 31.3542C31.1799 33.4239 28.945 35.2878 27.0008 34.0615L26.9979 34.0596L19.5166 29.3096C19.5119 29.3065 19.5057 29.3045 19.5 29.3045C19.4944 29.3045 19.4888 29.3061 19.4841 29.3091L19.4822 29.3103L12.5227 33.7175L12.5216 33.7182C10.3889 35.0742 7.92557 33.0127 8.50779 30.7306L10.51 22.8406L10.5103 22.8393C10.5146 22.8207 10.5138 22.8012 10.5078 22.7831C10.5017 22.7645 10.4904 22.748 10.4753 22.7355L10.4714 22.7323L3.76397 17.1378L3.76301 17.137C2.10848 15.7615 2.88481 12.9158 5.15822 12.7682L13.924 12.2036C13.9326 12.2031 13.9409 12.2001 13.9479 12.1949C13.9549 12.1898 13.9602 12.1827 13.9632 12.1746L13.9729 12.1493L17.2332 3.93922C17.4044 3.48056 17.7108 3.08445 18.112 2.80342Z" fill="#0A0A0A"></path>
+                    </svg>
+                    <span class="rate__count">
+                        5.0
+                    </span>
+                </div>
+                <div class="rate__logo">
+                    <svg viewBox="0 0 130 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_288_23840)">
+                            <path d="M123.943 32.2179C126.493 32.2179 128.299 31.7642 129.646 30.7868V26.3538C128.264 27.2962 126.599 27.8896 124.261 27.8896C120.329 27.8896 118.7 24.8878 118.7 20.1406C118.7 15.1491 120.684 12.601 124.297 12.601C126.422 12.601 128.512 13.334 129.61 14.0321V9.42454C128.441 8.79624 126.422 8.34247 123.659 8.34247C116.61 8.34247 112.962 13.334 112.962 20.3151C112.997 27.9594 116.575 32.2179 123.943 32.2179ZM89.4766 30.1934V25.7604C87.7763 26.9123 84.8717 27.9245 82.215 27.9245C78.1769 27.9245 76.6537 26.0396 76.4057 22.2H89.7245V19.3378C89.7245 11.3444 86.1469 8.34247 80.6564 8.34247C73.9262 8.34247 70.7382 13.4038 70.7382 20.35C70.7382 28.3434 74.7409 32.2179 81.7545 32.2179C85.2613 32.2179 87.8472 31.2755 89.4766 30.1934ZM38.9289 8.76134V17.8368H31.561V8.76134H26.0352V31.7642H31.561V22.1651H38.9289V31.7642H44.4548V8.76134H38.9289ZM69.3567 27.4359H66.9125V8.76134H50.8308V10.7161C50.8308 16.3359 50.4766 23.5962 48.5283 27.4359H46.7572V37H51.858V31.7642H64.2204V37H69.3213V27.4359H69.3567ZM107.081 31.7642H113.351L104.496 19.3727L112.289 8.76134H106.727L98.9343 19.3727V8.76134H93.4085V31.7642H98.9343V20.4547L107.081 31.7642ZM80.5147 12.601C83.2422 12.601 84.0924 14.8349 84.0924 17.7321V18.1859H76.4057C76.5474 14.5208 77.8935 12.601 80.5147 12.601ZM61.3867 27.4359H53.5937C55.1169 23.9802 55.542 17.6972 55.542 13.7179V13.0198H61.3867V27.4359Z" fill="black"></path>
+                            <path d="M21.4305 31.7642H15.7984V4.2934H13.2834C8.67847 4.2934 6.26976 6.56226 6.26976 9.94811C6.26976 13.7877 7.93461 15.5679 11.3706 17.8368L14.2044 19.7217L6.05722 31.7642H0L7.33243 21.0132C3.11717 18.0462 0.743869 15.1491 0.743869 10.2623C0.743869 4.15377 5.0654 0 13.248 0H21.3951V31.7642H21.4305Z" fill="#FC3F1D"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_288_23840">
+                                <rect width="130" height="37" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <svg class="rate__line" viewBox="0 0 226 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.50001 0C4.08173 0 0.470174 3.59384 0.782634 8.00106C4.90334 66.1233 53.5695 112 113 112C172.43 112 221.097 66.1233 225.217 8.00105C225.53 3.59384 221.918 0 217.5 0H185.829C181.41 0 177.881 3.59953 177.338 7.98426C173.387 39.8639 146.087 64.5406 113 64.5406C79.9134 64.5406 52.6088 39.8638 48.6575 7.98426C48.1141 3.59953 44.5846 0 40.1663 0H8.50001Z" fill="#EBF4F4"></path>
+                </svg>
+            </div>
+            <div class="rate">
+                <div class="rate__header">
+                    <svg viewBox="0 0 39 38" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M18.112 2.80342C18.5188 2.51854 19.0034 2.36572 19.5 2.36572C19.9966 2.36572 20.4812 2.51854 20.888 2.80342C21.2892 3.08445 21.5956 3.48056 21.7668 3.93922L25.0271 12.1493L25.0369 12.1746C25.0399 12.1827 25.0452 12.1898 25.0521 12.1949C25.0591 12.2001 25.0674 12.2031 25.076 12.2036L25.0834 12.204L33.8412 12.7681C36.1146 12.9157 36.8915 15.7616 35.237 17.137L35.236 17.1378L28.5286 22.7323L28.5247 22.7355C28.5096 22.748 28.4984 22.7645 28.4922 22.7831C28.4863 22.8012 28.4854 22.8206 28.4897 22.8391L28.4901 22.8406L30.6556 31.3542C31.1799 33.4239 28.945 35.2878 27.0008 34.0615L26.9979 34.0596L19.5166 29.3096C19.5119 29.3065 19.5057 29.3045 19.5 29.3045C19.4944 29.3045 19.4888 29.3061 19.4841 29.3091L19.4822 29.3103L12.5227 33.7175L12.5216 33.7182C10.3889 35.0742 7.92557 33.0127 8.50779 30.7306L10.51 22.8406L10.5103 22.8393C10.5146 22.8207 10.5138 22.8012 10.5078 22.7831C10.5017 22.7645 10.4904 22.748 10.4753 22.7355L10.4714 22.7323L3.76397 17.1378L3.76301 17.137C2.10848 15.7615 2.88481 12.9158 5.15822 12.7682L13.924 12.2036C13.9326 12.2031 13.9409 12.2001 13.9479 12.1949C13.9549 12.1898 13.9602 12.1827 13.9632 12.1746L13.9729 12.1493L17.2332 3.93922C17.4044 3.48056 17.7108 3.08445 18.112 2.80342Z" fill="#0A0A0A"></path>
+                    </svg>
+                    <span class="rate__count">
+                        5.0
+                    </span>
+                </div>
+                <div class="rate__logo">
+                    <svg viewBox="0 0 130 37" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <g clip-path="url(#clip0_288_23840)">
+                            <path d="M123.943 32.2179C126.493 32.2179 128.299 31.7642 129.646 30.7868V26.3538C128.264 27.2962 126.599 27.8896 124.261 27.8896C120.329 27.8896 118.7 24.8878 118.7 20.1406C118.7 15.1491 120.684 12.601 124.297 12.601C126.422 12.601 128.512 13.334 129.61 14.0321V9.42454C128.441 8.79624 126.422 8.34247 123.659 8.34247C116.61 8.34247 112.962 13.334 112.962 20.3151C112.997 27.9594 116.575 32.2179 123.943 32.2179ZM89.4766 30.1934V25.7604C87.7763 26.9123 84.8717 27.9245 82.215 27.9245C78.1769 27.9245 76.6537 26.0396 76.4057 22.2H89.7245V19.3378C89.7245 11.3444 86.1469 8.34247 80.6564 8.34247C73.9262 8.34247 70.7382 13.4038 70.7382 20.35C70.7382 28.3434 74.7409 32.2179 81.7545 32.2179C85.2613 32.2179 87.8472 31.2755 89.4766 30.1934ZM38.9289 8.76134V17.8368H31.561V8.76134H26.0352V31.7642H31.561V22.1651H38.9289V31.7642H44.4548V8.76134H38.9289ZM69.3567 27.4359H66.9125V8.76134H50.8308V10.7161C50.8308 16.3359 50.4766 23.5962 48.5283 27.4359H46.7572V37H51.858V31.7642H64.2204V37H69.3213V27.4359H69.3567ZM107.081 31.7642H113.351L104.496 19.3727L112.289 8.76134H106.727L98.9343 19.3727V8.76134H93.4085V31.7642H98.9343V20.4547L107.081 31.7642ZM80.5147 12.601C83.2422 12.601 84.0924 14.8349 84.0924 17.7321V18.1859H76.4057C76.5474 14.5208 77.8935 12.601 80.5147 12.601ZM61.3867 27.4359H53.5937C55.1169 23.9802 55.542 17.6972 55.542 13.7179V13.0198H61.3867V27.4359Z" fill="black"></path>
+                            <path d="M21.4305 31.7642H15.7984V4.2934H13.2834C8.67847 4.2934 6.26976 6.56226 6.26976 9.94811C6.26976 13.7877 7.93461 15.5679 11.3706 17.8368L14.2044 19.7217L6.05722 31.7642H0L7.33243 21.0132C3.11717 18.0462 0.743869 15.1491 0.743869 10.2623C0.743869 4.15377 5.0654 0 13.248 0H21.3951V31.7642H21.4305Z" fill="#FC3F1D"></path>
+                        </g>
+                        <defs>
+                            <clipPath id="clip0_288_23840">
+                                <rect width="130" height="37" fill="white"></rect>
+                            </clipPath>
+                        </defs>
+                    </svg>
+                </div>
+                <svg class="rate__line" viewBox="0 0 226 112" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path fill-rule="evenodd" clip-rule="evenodd" d="M8.50001 0C4.08173 0 0.470174 3.59384 0.782634 8.00106C4.90334 66.1233 53.5695 112 113 112C172.43 112 221.097 66.1233 225.217 8.00105C225.53 3.59384 221.918 0 217.5 0H185.829C181.41 0 177.881 3.59953 177.338 7.98426C173.387 39.8639 146.087 64.5406 113 64.5406C79.9134 64.5406 52.6088 39.8638 48.6575 7.98426C48.1141 3.59953 44.5846 0 40.1663 0H8.50001Z" fill="#EBF4F4"></path>
+                </svg>
+            </div>
+        </div>
+        <div class="">
+            <div id="reviewSlider" class="relative md:pt-[67px]  mb-6">
+                <div class="swiper ">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide review">
+                            <div class="review--top">
+                                <div class="review__header">
+                                    <div class="review__name">Ольга</div>
+                                    <div class="review__date">01.01.2024</div>
+                                </div>
+                                <div class="review__stars">
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                    <div class="review__star"></div>
+                                </div>
+                            </div>
+<div class="review--bot">
+    <p class="review__text">
+        Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+    </p>
+    <a href="/" class="button button-link w-fit">
+        <span>Читать полностью</span>
+    </a>
+</div>
+
+                        </div>
+                        <div class="swiper-slide review">
+                            <div class="review__header">
+                                <div class="review__name">Ольга</div>
+                                <div class="review__date">01.01.2024</div>
+                            </div>
+                            <div class="review__stars">
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star unfilled"></div>
+                            </div>
+                            <p class="review__text">
+                                Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                            </p>
+                            <a href="/" class="button button-link w-fit">
+                                <span>Читать полностью</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide review">
+                            <div class="review__header">
+                                <div class="review__name">Ольга</div>
+                                <div class="review__date">01.01.2024</div>
+                            </div>
+                            <div class="review__stars">
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                            </div>
+                            <p class="review__text">
+                                Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                            </p>
+                            <a href="/" class="button button-link w-fit">
+                                <span>Читать полностью</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide review">
+                            <div class="review__header">
+                                <div class="review__name">Ольга</div>
+                                <div class="review__date">01.01.2024</div>
+                            </div>
+                            <div class="review__stars">
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star unfilled"></div>
+                            </div>
+                            <p class="review__text">
+                                Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                            </p>
+                            <a href="/" class="button button-link w-fit">
+                                <span>Читать полностью</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide review">
+                            <div class="review__header">
+                                <div class="review__name">Ольга</div>
+                                <div class="review__date">01.01.2024</div>
+                            </div>
+                            <div class="review__stars">
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                            </div>
+                            <p class="review__text">
+                                Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                            </p>
+                            <a href="/" class="button button-link w-fit">
+                                <span>Читать полностью</span>
+                            </a>
+                        </div>
+                        <div class="swiper-slide review">
+                            <div class="review__header">
+                                <div class="review__name">Ольга</div>
+                                <div class="review__date">01.01.2024</div>
+                            </div>
+                            <div class="review__stars">
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                                <div class="review__star"></div>
+                            </div>
+                            <p class="review__text">
+                                Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие. Текст отзыва в четыре строки, далее многоточие.
+                            </p>
+                            <a href="/" class="button button-link w-fit">
+                                <span>Читать полностью</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="w-fit mx-auto mt-5 md:mt-0 md:mx-0 md:absolute top-0 right-0">
+                    <div class="swiper-controls">
+                        <button class="but prev">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
+                            </svg>
+                        </button>
+                        <div class="pagination">
+                        
+                        </div>
+                        <button class="but next">
+                            <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z"/>
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+                <script>
+                    document.addEventListener('DOMContentLoaded', () => {
+                        const swiper = new Swiper('#reviewSlider .swiper', {
+                            spaceBetween: 16,
+                            slidesPerView: 1,
+                            autoHeight: true,
+                            pagination: defaultFractionPag('#reviewSlider .swiper-controls .pagination'),
+                            navigation:{
+                                prevEl: '#reviewSlider .swiper-controls .prev',
+                                nextEl: '#reviewSlider .swiper-controls .next',
+                            },
+                            breakpoints: {
+                                768: {
+                                    slidesPerView: 2,
+                                },
+                                1366: {
+                                    slidesPerView: 3,
+                                    spaceBetween: 30,
+                                }
+                            }
+                        })
+                    })
+                </script>
+            </div>
+        </div>
+        <div class=" flex flex-col gap-3 md:gap-6 md:justify-end md:flex-row">
+            <a href="/" class="button button-main button-main--small-on-tab">
+                <span>Все отзывы</span>
+            </a>
+            <a href="/" class="button button-main button-main--small-on-tab button-main--secondary">
+                <span>Фото работ</span>
+            </a>
+        </div>
+    </div>
+</section>
+<section class="mb-10 xl:mb-[54px]">   
+    <div class="" id="doctorsSlider">
+        <div class="relative pb-[47px] md:pb-0 mb-6 md:mb-1 ">
+            <div class="flex justify-between items-center container">
+                <h2 class="text-mobh1 md:text-deskh2 xl:text-deskh1">Наши врачи</h2>
+                <div class="swiper-controls absolute left-1/2 bottom-0 -translate-x-1/2 md:static md:translate-x-0">
+                    <button class="but prev">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
+                        </svg>
+                    </button>
+                    <div class="pagination">
+                        
+                    </div>
+                    <button class="but next">
+                        <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+            <div class="swiper overflow-visible py-5 xl:mb-1 container">
+                <div class="swiper-wrapper">
+                    <article class="doctor-card swiper-slide">
+                        <div class="doctor-card__avatar">
+                            <img src="/img/mainpage/doc.jpg" alt="">
+                        </div>
+                        <div class="doctor-card__body">
+                            <div class="doctor-card__title">Тимофеев Дмитрий Евгеньевич</div>
+                            <div class="doctor-card__desc">Главный врач</div>
+                            <div class="doctor-card__reviews">
+                                <a href="/" class="button button-link w-fit">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1965 1.62304C10.432 1.4581 10.7125 1.36963 11.0001 1.36963C11.2876 1.36963 11.5681 1.4581 11.8036 1.62304C12.0359 1.78573 12.2133 2.01506 12.3124 2.2806L14.2 7.03378L14.2056 7.04847C14.2073 7.05317 14.2104 7.05725 14.2144 7.06023C14.2185 7.06321 14.2233 7.06495 14.2283 7.06524L14.2325 7.06549L19.3028 7.39207C20.619 7.47753 21.0688 9.12513 20.1109 9.92143L20.1104 9.92188L16.2271 13.1608L16.2249 13.1627C16.2161 13.1699 16.2096 13.1794 16.2061 13.1902C16.2026 13.2007 16.2021 13.2119 16.2046 13.2226L16.2048 13.2235L17.4585 18.1524C17.7621 19.3507 16.4682 20.4298 15.3426 19.7198L15.3409 19.7187L11.0097 16.9687C11.0069 16.9669 11.0033 16.9658 11.0001 16.9658C10.9968 16.9658 10.9936 16.9667 10.9908 16.9684L10.9897 16.9691L6.96056 19.5207L6.95993 19.5211C5.72519 20.3061 4.29906 19.1126 4.63614 17.7914L5.79529 13.2235L5.79548 13.2227C5.798 13.212 5.7975 13.2007 5.79404 13.1902C5.79049 13.1794 5.78397 13.1699 5.77524 13.1627L5.77298 13.1608L1.88972 9.92188L1.88917 9.92142C0.931278 9.12511 1.38073 7.47756 2.69691 7.39209L7.77184 7.06523C7.77684 7.06494 7.78165 7.06321 7.78568 7.06023C7.7897 7.05725 7.79278 7.05317 7.79452 7.04847L7.80016 7.03378L9.6877 2.2806C9.78681 2.01506 9.96418 1.78573 10.1965 1.62304Z" fill="#0A0A0A"/>
+                                    </svg>
+                                    <span>
+                                        16 отзывов
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="doctor-card__buttons">
+                                <a href="/" class="button button-main button-main--small-on-desk ">
+                                    <span>Записаться</span>
+                                </a>
+                                <a href="/" class="button button-link !text-but14m">
+                                    <span>Подробнее</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="doctor-card swiper-slide">
+                        <div class="doctor-card__avatar">
+                            <img src="/img/mainpage/doc.jpg" alt="">
+                        </div>
+                        <div class="doctor-card__body">
+                            <div class="doctor-card__title">Иванчатенко Федор Владимирович</div>
+                            <div class="doctor-card__desc">Врач-стоматолог, ортопед, имплантолог, хирург</div>
+                            <div class="doctor-card__reviews">
+                                <a href="/" class="button button-link w-fit">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1965 1.62304C10.432 1.4581 10.7125 1.36963 11.0001 1.36963C11.2876 1.36963 11.5681 1.4581 11.8036 1.62304C12.0359 1.78573 12.2133 2.01506 12.3124 2.2806L14.2 7.03378L14.2056 7.04847C14.2073 7.05317 14.2104 7.05725 14.2144 7.06023C14.2185 7.06321 14.2233 7.06495 14.2283 7.06524L14.2325 7.06549L19.3028 7.39207C20.619 7.47753 21.0688 9.12513 20.1109 9.92143L20.1104 9.92188L16.2271 13.1608L16.2249 13.1627C16.2161 13.1699 16.2096 13.1794 16.2061 13.1902C16.2026 13.2007 16.2021 13.2119 16.2046 13.2226L16.2048 13.2235L17.4585 18.1524C17.7621 19.3507 16.4682 20.4298 15.3426 19.7198L15.3409 19.7187L11.0097 16.9687C11.0069 16.9669 11.0033 16.9658 11.0001 16.9658C10.9968 16.9658 10.9936 16.9667 10.9908 16.9684L10.9897 16.9691L6.96056 19.5207L6.95993 19.5211C5.72519 20.3061 4.29906 19.1126 4.63614 17.7914L5.79529 13.2235L5.79548 13.2227C5.798 13.212 5.7975 13.2007 5.79404 13.1902C5.79049 13.1794 5.78397 13.1699 5.77524 13.1627L5.77298 13.1608L1.88972 9.92188L1.88917 9.92142C0.931278 9.12511 1.38073 7.47756 2.69691 7.39209L7.77184 7.06523C7.77684 7.06494 7.78165 7.06321 7.78568 7.06023C7.7897 7.05725 7.79278 7.05317 7.79452 7.04847L7.80016 7.03378L9.6877 2.2806C9.78681 2.01506 9.96418 1.78573 10.1965 1.62304Z" fill="#0A0A0A"/>
+                                    </svg>
+                                    <span>
+                                        12 отзывов
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="doctor-card__buttons">
+                                <a href="/" class="button button-main button-main--small-on-desk ">
+                                    <span>Записаться</span>
+                                </a>
+                                <a href="/" class="button button-link ">
+                                    <span>Подробнее</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="doctor-card swiper-slide">
+                        <div class="doctor-card__avatar">
+                            <img src="/img/mainpage/doc.jpg" alt="">
+                        </div>
+                        <div class="doctor-card__body">
+                            <div class="doctor-card__title">Тимофеев Дмитрий Евгеньевич</div>
+                            <div class="doctor-card__desc">Главный врач</div>
+                            <div class="doctor-card__reviews">
+                                <a href="/" class="button button-link w-fit">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1965 1.62304C10.432 1.4581 10.7125 1.36963 11.0001 1.36963C11.2876 1.36963 11.5681 1.4581 11.8036 1.62304C12.0359 1.78573 12.2133 2.01506 12.3124 2.2806L14.2 7.03378L14.2056 7.04847C14.2073 7.05317 14.2104 7.05725 14.2144 7.06023C14.2185 7.06321 14.2233 7.06495 14.2283 7.06524L14.2325 7.06549L19.3028 7.39207C20.619 7.47753 21.0688 9.12513 20.1109 9.92143L20.1104 9.92188L16.2271 13.1608L16.2249 13.1627C16.2161 13.1699 16.2096 13.1794 16.2061 13.1902C16.2026 13.2007 16.2021 13.2119 16.2046 13.2226L16.2048 13.2235L17.4585 18.1524C17.7621 19.3507 16.4682 20.4298 15.3426 19.7198L15.3409 19.7187L11.0097 16.9687C11.0069 16.9669 11.0033 16.9658 11.0001 16.9658C10.9968 16.9658 10.9936 16.9667 10.9908 16.9684L10.9897 16.9691L6.96056 19.5207L6.95993 19.5211C5.72519 20.3061 4.29906 19.1126 4.63614 17.7914L5.79529 13.2235L5.79548 13.2227C5.798 13.212 5.7975 13.2007 5.79404 13.1902C5.79049 13.1794 5.78397 13.1699 5.77524 13.1627L5.77298 13.1608L1.88972 9.92188L1.88917 9.92142C0.931278 9.12511 1.38073 7.47756 2.69691 7.39209L7.77184 7.06523C7.77684 7.06494 7.78165 7.06321 7.78568 7.06023C7.7897 7.05725 7.79278 7.05317 7.79452 7.04847L7.80016 7.03378L9.6877 2.2806C9.78681 2.01506 9.96418 1.78573 10.1965 1.62304Z" fill="#0A0A0A"/>
+                                    </svg>
+                                    <span>
+                                        16 отзывов
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="doctor-card__buttons">
+                                <a href="/" class="button button-main button-main--small-on-desk ">
+                                    <span>Записаться</span>
+                                </a>
+                                <a href="/" class="button button-link ">
+                                    <span>Подробнее</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="doctor-card swiper-slide">
+                        <div class="doctor-card__avatar">
+                            <img src="/img/mainpage/doc.jpg" alt="">
+                        </div>
+                        <div class="doctor-card__body">
+                            <div class="doctor-card__title">Иванчатенко Федор Владимирович</div>
+                            <div class="doctor-card__desc">Врач-стоматолог, ортопед, имплантолог, хирург</div>
+                            <div class="doctor-card__reviews">
+                                <a href="/" class="button button-link w-fit">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1965 1.62304C10.432 1.4581 10.7125 1.36963 11.0001 1.36963C11.2876 1.36963 11.5681 1.4581 11.8036 1.62304C12.0359 1.78573 12.2133 2.01506 12.3124 2.2806L14.2 7.03378L14.2056 7.04847C14.2073 7.05317 14.2104 7.05725 14.2144 7.06023C14.2185 7.06321 14.2233 7.06495 14.2283 7.06524L14.2325 7.06549L19.3028 7.39207C20.619 7.47753 21.0688 9.12513 20.1109 9.92143L20.1104 9.92188L16.2271 13.1608L16.2249 13.1627C16.2161 13.1699 16.2096 13.1794 16.2061 13.1902C16.2026 13.2007 16.2021 13.2119 16.2046 13.2226L16.2048 13.2235L17.4585 18.1524C17.7621 19.3507 16.4682 20.4298 15.3426 19.7198L15.3409 19.7187L11.0097 16.9687C11.0069 16.9669 11.0033 16.9658 11.0001 16.9658C10.9968 16.9658 10.9936 16.9667 10.9908 16.9684L10.9897 16.9691L6.96056 19.5207L6.95993 19.5211C5.72519 20.3061 4.29906 19.1126 4.63614 17.7914L5.79529 13.2235L5.79548 13.2227C5.798 13.212 5.7975 13.2007 5.79404 13.1902C5.79049 13.1794 5.78397 13.1699 5.77524 13.1627L5.77298 13.1608L1.88972 9.92188L1.88917 9.92142C0.931278 9.12511 1.38073 7.47756 2.69691 7.39209L7.77184 7.06523C7.77684 7.06494 7.78165 7.06321 7.78568 7.06023C7.7897 7.05725 7.79278 7.05317 7.79452 7.04847L7.80016 7.03378L9.6877 2.2806C9.78681 2.01506 9.96418 1.78573 10.1965 1.62304Z" fill="#0A0A0A"/>
+                                    </svg>
+                                    <span>
+                                        12 отзывов
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="doctor-card__buttons">
+                                <a href="/" class="button button-main button-main--small-on-desk ">
+                                    <span>Записаться</span>
+                                </a>
+                                <a href="/" class="button button-link ">
+                                    <span>Подробнее</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                    <article class="doctor-card swiper-slide">
+                        <div class="doctor-card__avatar">
+                            <img src="/img/mainpage/doc.jpg" alt="">
+                        </div>
+                        <div class="doctor-card__body">
+                            <div class="doctor-card__title">Тимофеев Дмитрий Евгеньевич</div>
+                            <div class="doctor-card__desc">Главный врач</div>
+                            <div class="doctor-card__reviews">
+                                <a href="/" class="button button-link w-fit">
+                                    <svg width="22" height="22" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path fill-rule="evenodd" clip-rule="evenodd" d="M10.1965 1.62304C10.432 1.4581 10.7125 1.36963 11.0001 1.36963C11.2876 1.36963 11.5681 1.4581 11.8036 1.62304C12.0359 1.78573 12.2133 2.01506 12.3124 2.2806L14.2 7.03378L14.2056 7.04847C14.2073 7.05317 14.2104 7.05725 14.2144 7.06023C14.2185 7.06321 14.2233 7.06495 14.2283 7.06524L14.2325 7.06549L19.3028 7.39207C20.619 7.47753 21.0688 9.12513 20.1109 9.92143L20.1104 9.92188L16.2271 13.1608L16.2249 13.1627C16.2161 13.1699 16.2096 13.1794 16.2061 13.1902C16.2026 13.2007 16.2021 13.2119 16.2046 13.2226L16.2048 13.2235L17.4585 18.1524C17.7621 19.3507 16.4682 20.4298 15.3426 19.7198L15.3409 19.7187L11.0097 16.9687C11.0069 16.9669 11.0033 16.9658 11.0001 16.9658C10.9968 16.9658 10.9936 16.9667 10.9908 16.9684L10.9897 16.9691L6.96056 19.5207L6.95993 19.5211C5.72519 20.3061 4.29906 19.1126 4.63614 17.7914L5.79529 13.2235L5.79548 13.2227C5.798 13.212 5.7975 13.2007 5.79404 13.1902C5.79049 13.1794 5.78397 13.1699 5.77524 13.1627L5.77298 13.1608L1.88972 9.92188L1.88917 9.92142C0.931278 9.12511 1.38073 7.47756 2.69691 7.39209L7.77184 7.06523C7.77684 7.06494 7.78165 7.06321 7.78568 7.06023C7.7897 7.05725 7.79278 7.05317 7.79452 7.04847L7.80016 7.03378L9.6877 2.2806C9.78681 2.01506 9.96418 1.78573 10.1965 1.62304Z" fill="#0A0A0A"/>
+                                    </svg>
+                                    <span>
+                                        16 отзывов
+                                    </span>
+                                </a>
+                            </div>
+                            <div class="doctor-card__buttons">
+                                <a href="/" class="button button-main button-main--small-on-desk ">
+                                    <span>Записаться</span>
+                                </a>
+                                <a href="/" class="button button-link ">
+                                    <span>Подробнее</span>
+                                </a>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <a href="/" class="w-full md:w-fit button button-main button-main--secondary ml-auto button-main--small-on-tab">
+                <span>Все врачи</span>
+            </a>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const swiper = new Swiper('#doctorsSlider .swiper', {
+                    spaceBetween: 16,
+                    slidesPerView: 'auto',
+                    pagination: defaultFractionPag('#doctorsSlider .swiper-controls .pagination'),
+                    navigation:{
+                        prevEl: '#doctorsSlider .swiper-controls .prev',
+                        nextEl: '#doctorsSlider .swiper-controls .next',
+                    },
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 2,
+                        },
+                        1366: {
+                            spaceBetween: 30,
+                            slidesPerView: 2,
+                        }
+                    }
+                })
+            })
+        </script>
+    </div>
+    
+</section>
+<section class="mb-10 xl:mb-[54px]">
+    <h2 class="text-mobh1 md:text-deskh2 xl:text-deskh1 mb-5 md:mb-[30px] container">
+        Наши отличные стоматологии: <br> Солнцево, Подольск, Мытищи
+    </h2>
+    <div class="container mb-5 md:mb-2 flex gap-4 items-center md:flex-wrap xl:gap-5 no-scrollbar overflow-auto">
+            <div class="flex items-center gap-2 text-but14m w-fit whitespace-nowrap">
+                <div class="w-8 h-8 flex items-center justify-center">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" />
+                        <rect x="6.26123" y="6.26086" width="16.8057" height="16.8537" rx="8.40286" fill="#EAF3F4"/>
+                    </svg>
+                </div>
+                <span>
+                    Премиальное оборудование
+                </span>
+            </div>
+            <div class="flex items-center gap-2 text-but14m w-fit whitespace-nowrap">
+                <div class="w-8 h-8 flex items-center justify-center">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" />
+                        <rect x="6.26123" y="6.26086" width="16.8057" height="16.8537" rx="8.40286" fill="#EAF3F4"/>
+                    </svg>
+                </div>
+                <span>
+                    Опытные стоматологи
+                </span>
+            </div>
+            <div class="flex items-center gap-2 text-but14m w-fit whitespace-nowrap">
+                <div class="w-8 h-8 flex items-center justify-center">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" />
+                        <rect x="6.26123" y="6.26086" width="16.8057" height="16.8537" rx="8.40286" fill="#EAF3F4"/>
+                    </svg>
+                </div>
+                <span>
+                    Передовые методики 
+                </span>
+            </div>
+            <div class="flex items-center gap-2 text-but14m w-fit whitespace-nowrap">
+                <div class="w-8 h-8 flex items-center justify-center">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" />
+                        <rect x="6.26123" y="6.26086" width="16.8057" height="16.8537" rx="8.40286" fill="#EAF3F4"/>
+                    </svg>
+                </div>
+                <span>
+                    Индвидуальный подход
+                </span>
+            </div>
+            <div class="flex items-center gap-2 text-but14m w-fit whitespace-nowrap">
+                <div class="w-8 h-8 flex items-center justify-center">
+                    <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M24.2653 5.06791C24.3028 5.0304 24.364 5.03072 24.4013 5.06848C29.672 10.4126 29.6493 19.0173 24.3333 24.3333C19.0172 29.6494 10.4125 29.672 5.0684 24.4013C5.03064 24.3641 5.03032 24.3029 5.06783 24.2654L9.02821 20.305C9.06571 20.2675 9.12678 20.2679 9.16473 20.3049C12.2466 23.3137 17.1835 23.2907 20.2371 20.2371C23.2906 17.1836 23.314 12.2462 20.3053 9.16439C20.2682 9.12643 20.2679 9.06537 20.3054 9.02787L24.2653 5.06791Z" />
+                        <rect x="6.26123" y="6.26086" width="16.8057" height="16.8537" rx="8.40286" fill="#EAF3F4"/>
+                    </svg>
+                </div>
+                <span>
+                    Антистресс лечение
+                </span>
+            </div>
+    </div>
+    <div class="container relative pb-[67px] md:pb-0 md:mb-6 flex items-center flex-col " id="imageSlider">
+        <div class="w-full">
+            <div class="swiper-controls absolute md:mb-3 left-1/2 bottom-0 -translate-x-1/2 md:static md:translate-x-0 ml-auto">
+                <button class="but prev">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
+                    </svg>
+                </button>
+                <div class="pagination">
+                    
+                </div>
+                <button class="but next">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class=" swiper overflow-visible xl:overflow-hidden">
+            <!-- md:pr-[300px] -->
+            <div class="swiper-wrapper">
+                
+                <div href="/" class="swiper-slide aspect-[351/265] md:aspect-auto md:h-[332px] md:w-[440px] md:max-w-[440px] xl:h-[536px] xl:w-[711px] xl:max-w-[711px]">
+                    <img class="w-full h-full object-cover" src="/img/mainpage/image_slider-2.jpg" alt="">
+                </div>
+                <div href="/" class="swiper-slide aspect-[351/265] md:aspect-auto md:h-[332px] md:w-[440px] md:max-w-[440px] xl:h-[536px] xl:w-[711px] xl:max-w-[711px]">
+                    <img class="w-full h-full object-cover" src="/img/mainpage/image_slider-1.jpg" alt="">
+                </div>
+                <div href="/" class="swiper-slide aspect-[351/265] md:aspect-auto md:h-[332px] md:w-[440px] md:max-w-[440px] xl:h-[536px] xl:w-[711px] xl:max-w-[711px]">
+                    <img class="w-full h-full object-cover" src="/img/mainpage/image_slider.jpg" alt="">
+                </div>
+                <div href="/" class="swiper-slide aspect-[351/265] md:aspect-auto md:h-[332px] md:w-[440px] md:max-w-[440px] xl:h-[536px] xl:w-[711px] xl:max-w-[711px]">
+                    <img class="w-full h-full object-cover" src="/img/mainpage/image_slider-1.jpg" alt="">
+                </div>
+                <div href="/" class="swiper-slide aspect-[351/265] md:aspect-auto md:h-[332px] md:w-[440px] md:max-w-[440px] xl:h-[536px] xl:w-[711px] xl:max-w-[711px]">
+                    <img class="w-full h-full object-cover" src="/img/mainpage/image_slider-2.jpg" alt="">
+                </div>
+                <div href="/" class="swiper-slide aspect-[351/265] md:aspect-auto md:h-[332px] md:w-[440px] md:max-w-[440px] xl:h-[536px] xl:w-[711px] xl:max-w-[711px]">
+                    <img class="w-full h-full object-cover" src="/img/mainpage/image_slider.jpg" alt="">
+                </div>
+                <!-- <a href="/" class="swiper-slide aspect-[351/265] md:aspect-auto md:h-[332px]   xl:h-[536px]  ">
+                    <img class="w-full h-full object-cover" src="/img/mainpage/image_slider-2.jpg" alt="">
+                </a>
+                <a href="/" class="swiper-slide aspect-[351/265] md:aspect-auto md:h-[332px]   xl:h-[536px]  ">
+                    <img class="w-full h-full object-cover" src="/img/mainpage/image_slider-1.jpg" alt="">
+                </a>
+                <a href="/" class="swiper-slide aspect-[351/265] md:aspect-auto md:h-[332px]   xl:h-[536px]  ">
+                    <img class="w-full h-full object-cover" src="/img/mainpage/image_slider.jpg" alt="">
+                </a> -->
+            </div>
+        </div>
+        <script>
+            document.addEventListener('DOMContentLoaded', () => {
+                const swiper = new Swiper('#imageSlider .swiper', {
+                    slidesPerView: 1,
+                    pagination: defaultFractionPag('#imageSlider .swiper-controls .pagination'),
+                    navigation:{
+                        prevEl: '#imageSlider .swiper-controls .prev',
+                        nextEl: '#imageSlider .swiper-controls .next',
+                    },
+                    // grabCursor: true,
+                    loop: true,
+                    loopAdditionalSlides: 2,
+                    effect: "creative",
+                    creativeEffect: {
+                        limitProgress: 2,
+                      prev: {
+                        shadow: true,
+                        translate: ["-100%", 0, 1],
+                        opacity: 0,
+                      },
+                      next: {
+                        translate: ["50%", 0, 0],
+                      },
+                    },
+                    
+                    breakpoints: {
+                        768: {
+                            slidesPerView: 'auto',
+                        },
+                        1366: {
+                            slidesPerView: 'auto',
+                        }
+                    }
+                })
+            })
+        </script>
+    </div>
+    <div class="container hidden md:block">
+        <a href="/" class="button button-main button-main--secondary button-main--small-on-tab w-fit ml-auto">
+            <span>
+                Подробнее
+            </span>
+        </a>
+    </div>
+</section>
+<section class="mb-10 xl:mb-[54px]">
+    <h2 class="container text-mobh1 md:text-deskh2 xl:text-deskh1 mb-5 md:mb-[30px]">
+        Мы в социальных сетях
+    </h2>
+    <div class="container mb-[30px] xl:mb-10">
+        <ul class="w-fit mx-auto gap-[30px] xl:gap-[87px] grid grid-cols-2 xl:flex justify-center items-center">
+            <li>
+                <a href="/" class="social-button">
+                    <svg  viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M38.9703 54.6001C18.6015 54.6001 6.9836 40.6362 6.49951 17.4001H16.7025C17.0376 34.4548 24.5594 41.6788 30.5174 43.1683V17.4001H40.1249V32.1088C46.0084 31.4758 52.189 24.7731 54.2743 17.4001H63.8818C62.2806 26.486 55.5779 33.1887 50.8115 35.9442C55.5779 38.1785 63.2119 44.0248 66.1164 54.6001H55.5407C53.2692 47.5251 47.6096 42.0512 40.1249 41.3064V54.6001H38.9703Z" fill="#0A0A0A"/>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="/" class="social-button">
+                    <svg  viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M59.345 9.55213C48.533 8.81413 24.452 8.81713 13.655 9.55213C1.964 10.3501 0.587 17.4121 0.5 36.0001C0.587 54.5551 1.952 61.6471 13.655 62.4481C24.455 63.1831 48.533 63.1861 59.345 62.4481C71.036 61.6501 72.413 54.5881 72.5 36.0001C72.413 17.4451 71.048 10.3531 59.345 9.55213V9.55213ZM27.5 48.0001V24.0001L51.5 35.9791L27.5 48.0001V48.0001Z" fill="#0A0A0A"/>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="/" class="social-button">
+                    <svg  viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M10.912 32.6279C28.6864 24.8085 51.688 15.2749 54.863 13.9554C63.1916 10.5018 65.7472 11.1637 64.4729 18.812C63.5579 24.3092 60.9175 42.5094 58.8131 53.8376C57.5643 60.5554 54.7626 61.3516 50.3572 58.4453C48.2386 57.0466 37.5454 49.9753 35.2246 48.3149C33.106 46.8017 30.1841 44.9815 33.8485 41.3963C35.1524 40.1193 43.7002 31.9576 50.36 25.6047C51.2326 24.7703 50.1365 23.3999 49.1296 24.0688C40.1533 30.0214 27.7078 38.2836 26.1238 39.3598C23.7309 40.9848 21.4327 41.7301 17.3073 40.545C14.1902 39.6497 11.1453 38.582 9.96018 38.1747C5.39635 36.6077 6.47968 34.5782 10.912 32.6279Z" fill="#0A0A0A"/>
+                    </svg>
+                </a>
+            </li>
+            <li>
+                <a href="/" class="social-button">
+                    <svg  viewBox="0 0 73 72" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M46.0569 31.7685C43.543 34.2825 40.0809 35.8487 36.2481 35.8487C32.4151 35.8487 28.953 34.2825 26.4389 31.7685C23.925 29.2544 22.3587 25.7927 22.3587 21.9597C22.3587 18.1267 23.925 14.6646 26.4389 12.1504C28.953 9.63626 32.4151 8.07056 36.2481 8.07056C40.0809 8.07056 43.543 9.63626 46.0569 12.1504C48.5709 14.6646 50.1371 18.1267 50.1371 21.9597C50.1371 25.7927 48.5709 29.2544 46.0569 31.7685ZM36.2481 15.6126C34.5169 15.6126 32.9508 16.3131 31.7968 17.4673C30.6428 18.621 29.9421 20.1872 29.9421 21.918C29.9421 23.6494 30.6428 25.2156 31.7968 26.3695C32.9508 27.5233 34.5169 28.2241 36.2481 28.2241C37.979 28.2241 39.5452 27.5233 40.699 26.3695C41.853 25.2156 42.5538 23.6494 42.5538 21.918C42.5538 20.1872 41.853 18.621 40.699 17.4673C39.5452 16.3543 37.979 15.6126 36.2481 15.6126ZM50.8376 35.8898L54.918 41.4538C55.1243 41.7423 55.0831 42.1132 54.7946 42.3193C51.3736 45.122 47.376 46.9765 43.2132 47.9658L51.085 63.1324C51.2913 63.586 51.0027 64.0806 50.5084 64.0806H42.1004C41.853 64.0806 41.6058 63.9155 41.4821 63.6684L36.2481 51.1391L30.9726 63.627C30.8902 63.8742 30.6428 64.039 30.3543 64.039H21.9465C21.4519 64.039 21.1634 63.5036 21.3697 63.0913L29.2416 47.9658C25.0788 46.9765 21.1223 45.122 17.6603 42.3193C17.4131 42.1132 17.3307 41.701 17.5368 41.4538L21.6169 35.8898C21.8641 35.5602 22.2763 35.5189 22.5648 35.7663C26.3978 39.0221 31.1374 41.1653 36.2066 41.1653C41.276 41.1653 45.9745 39.0634 49.8485 35.7663C50.1782 35.5189 50.6319 35.5602 50.8376 35.8898Z" fill="#0A0A0A"/>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <h3 class="container text-mobh2 md:text-deskh3 xl:text-deskh2 mb-5 md:mb-[30px]">Интересное</h3>
+    <div class="container flex items-center gap-[22px] md:justify-center xl:gap-8 md:flex-wrap xl:flex-nowrap no-scrollbar overflow-auto">
+        <a href="/" class="story">
+            <img src="/img/mainpage/image_slider.jpg" alt="">
+        </a>
+        <a href="/" class="story">
+            <img src="/img/mainpage/image_slider.jpg" alt="">
+        </a>
+        <a href="/" class="story">
+            <img src="/img/mainpage/image_slider.jpg" alt="">
+        </a>
+        <a href="/" class="story">
+            <img src="/img/mainpage/image_slider.jpg" alt="">
+        </a>
+        <a href="/" class="story">
+            <img src="/img/mainpage/image_slider.jpg" alt="">
+        </a>
+        <a href="/" class="story">
+            <img src="/img/mainpage/image_slider.jpg" alt="">
+        </a>
+        <a href="/" class="story !hidden xl:!flex">
+            <img src="/img/mainpage/image_slider.jpg" alt="">
+        </a>
+        <a href="/" class="story !hidden xl:!flex">
+            <img src="/img/mainpage/image_slider.jpg" alt="">
+        </a>
+    </div>
+</section>
+<section class="mb-10 xl:mb-[54px] swiper-container pb-0-on-remove-pagination">
+    <div class="pb-[67px] md:pb-0 relative container">
+        <div class=" flex items-center justify-between mb-5">
+            <h2 class="text-mobh1 md:text-deskh2 xl:deskh1">Наш блог</h2>
+            <div class="swiper-controls absolute left-1/2 bottom-0 -translate-x-1/2 md:static md:translate-x-0 ">
+                <button class="but prev">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M12.9419 4.24824C13.186 4.49232 13.186 4.88805 12.9419 5.13213L7.13388 10.9402L12.9419 16.7482C13.186 16.9923 13.186 17.388 12.9419 17.6321C12.6979 17.8762 12.3021 17.8762 12.0581 17.6321L5.80806 11.3821C5.56398 11.138 5.56398 10.7423 5.80806 10.4982L12.0581 4.24824C12.3021 4.00417 12.6979 4.00417 12.9419 4.24824Z"/>
+                    </svg>
+                </button>
+                <div class="pagination">
+                    
+                </div>
+                <button class="but next">
+                    <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M7.05806 3.80806C7.30214 3.56398 7.69786 3.56398 7.94194 3.80806L14.1919 10.0581C14.436 10.3021 14.436 10.6979 14.1919 10.9419L7.94194 17.1919C7.69786 17.436 7.30214 17.436 7.05806 17.1919C6.81398 16.9479 6.81398 16.5521 7.05806 16.3081L12.8661 10.5L7.05806 4.69194C6.81398 4.44786 6.81398 4.05214 7.05806 3.80806Z"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div class="swiper" data-slider-spv="1" >
+            <div class="swiper-wrapper">
+                <a href="/" class="swiper-slide h-auto p-4 rounded-2xl bg-mcg-pg min-h-[259px] md:min-h-[276px] xl:min-h-[352px] flex">
+                    <span class="p-4 rounded-2xl border border-mcg-salat w-full h-auto flex flex-col gap-3">
+                        <span class="flex items-center justify-between text-body3">
+                            <span class="flex items-center gap-1 text-mcg-salat">
+                                <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd" d="M14.2934 3.03981C14.3154 3.01782 14.3513 3.01801 14.3731 3.04014C17.4628 6.17289 17.4496 11.217 14.3333 14.3333C11.2169 17.4497 6.1728 17.4629 3.04005 14.3732C3.01791 14.3514 3.01773 14.3155 3.03971 14.2935L5.36132 11.9719C5.3833 11.9499 5.4191 11.9501 5.44135 11.9719C7.24794 13.7356 10.142 13.7221 11.932 11.9321C13.722 10.1421 13.7358 7.24779 11.972 5.44119C11.9503 5.41895 11.9501 5.38315 11.9721 5.36117L14.2934 3.03981Z" fill="#D2E049"/>
+                                    <rect x="3.73938" y="3.73926" width="9.85164" height="9.87979" rx="4.92582" fill="#F7FFA5"/>
+                                </svg>
+                                <span>Ортодонтия</span>
+                            </span>
+                            <span class="text-el-dg">29.05.2024</span>
+                        </span>
+                        <span class="text-bg-white text-mobh2 xl:text-deskh4 flex-1 flex items-center">
+                            Самолигирующие брекеты: конструкция, разновидности, преимущества
+                        </span>
+                        <span class="text-bg-white text-but18r block pt-1 md:ml-auto">
+                            Подробнее
+                        </span>
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="container hidden md:block mt-6">
+        <a href="/" class="w-full md:w-fit button button-main button-main--secondary ml-auto button-main--small-on-tab">
+            <span>Смотреть все статьи</span>
+        </a>
+    </div>
+</section>
+<section class="mb-10 xl:mb-[54px]">
+    <script>
+        // console.log(ymaps3)
+        
+        // ymaps3.ready.then(() => {
+        //   // HTML-элемент.
+        //   const map = new ymaps3.YMap(document.getElementById('first_map'), {
+        //     location: {
+        //       center: [37.588144, 55.733842],
+        //       zoom: 10
+        //     }
+        //   });
+        // });
+    </script>
+</section>
+
+<!-- MAINPAGE END-->

@@ -1,0 +1,56 @@
+:root {
+  --ffffff: #fff;
+  --dfb48f: #dfb48f;
+  --eb0e54: #eb0e54;
+  --121212: #121212;
+  --24272e: #24272e;
+  --f5f7fa: #f5f7fa;
+  --9f0033: #9f0033;
+  --font-family: "Montserrat", sans-serif;
+  --second-family: "Inter", sans-serif;
+  --transition: 0.3s all;
+}
+
+
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: var(--font-family), sans-serif;
+}
+
+a{
+  color: inherit;
+  text-decoration: none;
+}
+
+
+.main{
+  //padding-top: 60px;
+  //@media screen and (max-width: 900px) {
+  //  padding-top: 40px;
+  //}
+  //@media screen and (max-width: 600px) {
+  //  padding-top: 20px;
+  //}
+}
+ul,ol{
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.mobile{
+  display: none;
+  @media screen and (max-width: 600px){
+    display: block;
+
+  }
+}
+
+.desktop{
+  @media screen and (max-width: 600px) {
+    display: none;
+  }
+}
+

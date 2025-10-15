@@ -1,0 +1,217 @@
+.faq {
+  overflow: hidden;
+
+  &-section {
+    background-image: url("/img/bg/faq-bg.jpg");
+    padding-bottom: 100px;
+    @media screen and (max-width: 1200px) {
+      background: url("/img/bg/faq-bg-tab.jpg") no-repeat;
+      background-size: cover;
+      padding-bottom: 50px;
+    }
+
+    @media screen and (max-width: 600px) {
+      background: url("/img/bg/faq-bg-m.jpg") no-repeat;
+      background-size: cover;
+      padding-bottom: 50px;
+    }
+   &-bg{
+    background-image: url("/img/bg/faq-bg.jpg");
+    @media screen and (max-width: 1200px) {
+      background: url("/img/bg/faq-bg-tab.jpg") no-repeat;
+      background-size: cover;
+    }
+
+    @media screen and (max-width: 600px) {
+      background: url("/img/bg/faq-bg-m.jpg") no-repeat;
+      background-size: cover;
+    }
+
+  }
+
+  }
+
+
+
+  border: 1px solid var(--dfb48f);
+  border-radius: 12px 12px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  @media screen and (max-width: 900px) {
+    gap: 12px;
+  }
+  @media screen and (max-width: 600px) {
+    margin-top: 30px;
+  }
+
+  &-item {
+    &:nth-last-child(1) {
+      .faq-body,
+      .faq-header {
+        border-bottom: 0;
+      }
+
+      &.active {
+        .faq-header {
+          border-bottom: 1px solid var(--dfb48f);
+
+        }
+      }
+    }
+
+
+    &.active {
+      .faq-btn:after {
+        transform: translate(-50%, -50%) rotate(90deg);
+      }
+    }
+  }
+
+  &-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    cursor: pointer;
+    padding: 20px 30px;
+    border-bottom: 1px solid var(--dfb48f);
+    @media screen and (max-width: 900px) {
+      padding: 15px 30px;
+    }
+    @media screen and (max-width: 600px) {
+      padding: 10px 20px;
+
+    }
+
+    &:hover .faq-title {
+    }
+  }
+
+  &-body {
+    padding: 28px 30px;
+    border-bottom: 1px solid var(--dfb48f);
+    @media screen and (max-width: 600px) {
+      padding: 10px 20px;
+    }
+    display: none;
+
+    .description {
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 18px;
+      line-height: 160%;
+      color: var(--ffffff);
+      @media screen and (max-width: 600px) {
+        font-size: 14px;
+      }
+    }
+    .bold{
+      font-weight: 600;
+    }
+    a {
+      color: var(--eb0e54);
+      @include underline-hover(var(--eb0e54));
+    }
+    .list-check{
+      margin: 13px 0;
+      gap: 10px;
+    }
+    .list-check__item {
+      font-family: var(--font-family);
+      font-weight: 600;
+      font-size: 18px;
+      line-height: 160%;
+      color: var(--121212);
+      padding-left: 40px;
+      &::before {
+        width: 30px;
+        height: 30px;
+        background: url(/img/icon/list-check-big.svg) center center / cover no-repeat;
+      }
+    }
+  }
+
+  &-title {
+    font-family: var(--font-family);
+    font-weight: 400;
+    font-size: 26px;
+    line-height: 120%;
+    color: var(--ffffff);
+    transition: var(--transition);
+    @media screen and (max-width: 900px) {
+      font-size: 22px;
+    }
+    @media screen and (max-width: 600px) {
+      font-size: 18px;
+      max-width: 240px;
+    }
+    &:hover{
+      color: var(--eb0e54);
+    }
+  }
+
+  &-btn {
+    min-width: 30px;
+    height: 30px;
+    position: relative;
+
+    &:before,
+    &:after {
+      content: "";
+      position: absolute;
+      background: var(--eb0e54);
+      transition: var(--transition);
+      transform: translate(-50%, -50%);
+    }
+
+    &:before {
+      width: 30px;
+      height: 2px;
+      left: 50%;
+      top: 50%;
+    }
+
+    &:after {
+      width: 2px;
+      height: 30px;
+      top: 50%;
+      left: 50%;
+    }
+  }
+
+  
+}
+.faq-body .list-check{
+  .list-check__item {
+    color: #fff;
+  }
+}
+.faq-section.section-white{
+  background: var(--ffffff);
+
+  .faq-body .description,
+  .faq-title,
+  .title{
+    color: var(--121212);
+  }
+  .faq-header{
+    background: var(--f5f7fa);
+  }
+.faq{
+  @media screen and (max-width: 900px) {
+    gap: 0 ;
+  }
+}
+  .faq-body .list-check{
+    .list-check__item {
+      color: #121212;
+    }
+  }
+  .faq-title{
+    &:hover{
+      color: var(--eb0e54);
+    }
+  }
+
+}
+
