@@ -193,24 +193,42 @@ $(function() {
         $this.parent(parent).children(show).slideToggle(300)
     })
 
-    function stepItem(index){
-        console.log(index)
-        const $this = $(".steps-item").eq(index),
-            item = $this.data('item'),
+    function stepItem(index, $this){
+        console.log($this,'$this')
+        const  item = $this.data('item'),
             parent = $this.data('parent'),
             show = $this.data('show')
+        console.log(show,'show')
+        console.log(item,'item')
+        console.log($(parent),'$(parent)')
+        console.log($(parent).find(".steps-item")   )
         if($this.hasClass('active')) return false;
-        $(".steps-item").removeClass('active')
-        $(".steps-item").eq(item).toggleClass('active')
+        $(parent).find(".steps-item").removeClass('active')
+        $(parent).find(".steps-item").eq(item).toggleClass('active')
         $(parent).find(show).slideUp(300)
         $(parent).find(show).eq(item).slideDown(300)
+        console.log($(parent).find(show).eq(item),'test item')
         console.log( $(parent).find(show))
     }
 
     $(".steps-item").on('click', function () {
         const $this = $(this),
             item = $this.data('item')
-        stepItem(item)
+        // stepItem(item, $this)
+        // console.log($this,'$this')
+        const parent = $this.parent($this.parent('parent')),
+            show = $this.data('show')
+        console.log(show,'show')
+        console.log(item,'item')
+        console.log($(parent),'$(parent)')
+        console.log($(parent).find(".steps-item")   )
+        if($this.hasClass('active')) return false;
+        $(parent).find(".steps-item").removeClass('active')
+        $(parent).find(".steps-item").eq(item).toggleClass('active')
+        $(parent).find(show).slideUp(300)
+        $(parent).find(show).eq(item).slideDown(300)
+        console.log($(parent).find(show).eq(item),'test item')
+        console.log( $(parent).find(show))
     })
 
     $(".custom-select .select-items__items div").on("click", function () {
@@ -359,4 +377,3 @@ $(function () {
 
 
 
-console.log(mainSwiper)

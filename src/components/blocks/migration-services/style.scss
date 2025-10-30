@@ -332,7 +332,7 @@ gap: 20px;
 }
 
 .section-header-relative-col.column{
-  flex-direction: column;
+  flex-direction: column !important;
 }
 
 .migration-promo__small{
