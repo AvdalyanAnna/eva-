@@ -375,5 +375,29 @@ $(function () {
 });
 
 
+$(function() {
+    const data = {
+        name: "Фитнес клуб",
+        children: [
+            {
+                name: "Силовые тренировки",
+            },
+            {
+                name: "Аэробика",
+            },
+            {
+                name: "Аэробика 1",
+            },
+        ]
+    };
+
+    $('#chart').orgchart({
+        'data' : data,
+        'nodeContent': 'title',
+        'pan': true,
+        'zoom': true
+    });
+});
+
 
 
