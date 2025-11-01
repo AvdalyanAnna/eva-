@@ -1,6 +1,7 @@
 const plugins = [
 	"src/js/swiper.js",
 	"src/js/jQuery.js",
+	"src/js/isotope.js",
 	"node_modules/imask/dist/imask.min.js",
 	'node_modules/@fancyapps/ui/dist/fancybox/fancybox.umd.js',
 ];

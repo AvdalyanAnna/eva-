@@ -1,16 +1,16 @@
-$(function (){
-    function stepItem(index){
+$(function () {
+    function stepItem(index) {
         console.log(index)
         const $this = $(".steps-item").eq(index),
             item = $this.data('item'),
             parent = $this.data('parent'),
             show = $this.data('show')
-        if($this.hasClass('active')) return false;
+        if ($this.hasClass('active')) return false;
         $(".steps-item").removeClass('active')
         $(".steps-item").eq(item).toggleClass('active')
         $(parent).find(show).slideUp(300)
         $(parent).find(show).eq(item).slideDown(300)
-        console.log( $(parent).find(show))
+        console.log($(parent).find(show))
     }
 })
 
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", () => {
                 /* For each option in the original select element,
                 create a new DIV that will act as an option item: */
                 c = document.createElement("DIV");
-                    c.setAttribute('data-value', j);
+                c.setAttribute('data-value', j);
                 c.innerHTML = selElmnt.options[j].innerHTML;
                 if (j === selElmnt.selectedIndex) {
                     c.setAttribute("class", "same-as-selected");
@@ -175,7 +175,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 // SELECTS END
 })
-$(function() {
+$(function () {
     $('.burger, .overlay,.mobile-menu__close,.mobile-menu__before').click(function () {
         $('.burger').toggleClass('clicked');
         $('.overlay').toggleClass('show');
@@ -188,27 +188,27 @@ $(function() {
         const $this = $(this),
             parent = $this.data('parent'),
             show = $this.data('show')
-        console.log(parent,show)
+        console.log(parent, show)
         $this.parent(parent).toggleClass('active')
         $this.parent(parent).children(show).slideToggle(300)
     })
 
-    function stepItem(index, $this){
-        console.log($this,'$this')
-        const  item = $this.data('item'),
+    function stepItem(index, $this) {
+        console.log($this, '$this')
+        const item = $this.data('item'),
             parent = $this.data('parent'),
             show = $this.data('show')
-        console.log(show,'show')
-        console.log(item,'item')
-        console.log($(parent),'$(parent)')
-        console.log($(parent).find(".steps-item")   )
-        if($this.hasClass('active')) return false;
+        console.log(show, 'show')
+        console.log(item, 'item')
+        console.log($(parent), '$(parent)')
+        console.log($(parent).find(".steps-item"))
+        if ($this.hasClass('active')) return false;
         $(parent).find(".steps-item").removeClass('active')
         $(parent).find(".steps-item").eq(item).toggleClass('active')
         $(parent).find(show).slideUp(300)
         $(parent).find(show).eq(item).slideDown(300)
-        console.log($(parent).find(show).eq(item),'test item')
-        console.log( $(parent).find(show))
+        console.log($(parent).find(show).eq(item), 'test item')
+        console.log($(parent).find(show))
     }
 
     $(".steps-item").on('click', function () {
@@ -218,20 +218,20 @@ $(function() {
         // console.log($this,'$this')
         const parent = $this.parent($this.parent('parent')),
             show = $this.data('show')
-        console.log(show,'show')
-        console.log(item,'item')
-        console.log($(parent),'$(parent)')
-        console.log($(parent).find(".steps-item")   )
-        if($this.hasClass('active')) return false;
+        console.log(show, 'show')
+        console.log(item, 'item')
+        console.log($(parent), '$(parent)')
+        console.log($(parent).find(".steps-item"))
+        if ($this.hasClass('active')) return false;
         $(parent).find(".steps-item").removeClass('active')
         $(parent).find(".steps-item").eq(item).toggleClass('active')
         $(parent).find(show).slideUp(300)
         $(parent).find(show).eq(item).slideDown(300)
-        console.log($(parent).find(show).eq(item),'test item')
-        console.log( $(parent).find(show))
+        console.log($(parent).find(show).eq(item), 'test item')
+        console.log($(parent).find(show))
     })
 
-    $(".custom-select .select-items__items div").on("click", function () {
+    $(".steps-section .custom-select .select-items__items div").on("click", function () {
         const index = $(this).data("value"); // или getAttribute('data-value')
         stepItem(index);
     });
@@ -261,7 +261,7 @@ $(function () {
         });
     });
 
-    $('.calculator-step__item input').on('change', function (){
+    $('.calculator-step__item input').on('change', function () {
         const value = $(this).val();
         const parent = $(this).parent().parent().parent()
         let price = +$('.calculator__right-price span').attr('data-price')
@@ -282,11 +282,11 @@ $(function () {
 
         $('.calculator__right-price span').html(price.toLocaleString('ru-RU'))
 
-        $(`.calculator-step.calculator-step--${+step}`).attr('data-checked',value)
-        if(prev){
+        $(`.calculator-step.calculator-step--${+step}`).attr('data-checked', value)
+        if (prev) {
             $('.calculator__left .prev').removeClass('disabled')
         }
-        if(next){
+        if (next) {
             $('.calculator__left .next').removeClass('disabled')
         }
 
@@ -352,10 +352,15 @@ $(function () {
         //     $(this).parent().toggleClass('active')
         //         .find('.sub-menu').stop(true, true).slideToggle();
         // });
-        $('.sub-menu__item-title').on('click', function (e) {
+        $('.header .sub-menu__item-title').on('click', function (e) {
             e.preventDefault();
             $(this).parent().toggleClass('active')
-                    .find('.sub-menu__item-list').stop(true, true).slideToggle();
+                .find('.sub-menu__item-list').stop(true, true).slideToggle();
+        });
+        $(' .sub-menu__item-title').on('click', function (e) {
+            e.preventDefault();
+            $(this).parent().toggleClass('active')
+                .find('.sub-menu__item-list').stop(true, true).slideToggle();
         });
     } else {
         // Десктоп — по наведению
@@ -366,7 +371,7 @@ $(function () {
             $(this).removeClass('active')
                 .find('.sub-menu').stop(true, true).slideUp();
         });
-        $('.sub-menu').on('mouseleave', function (){
+        $('.sub-menu').on('mouseleave', function () {
             $(this).slideUp()
             $(this).parent().removeClass('active')
 
@@ -375,27 +380,38 @@ $(function () {
 });
 
 
-$(function() {
-    const data = {
-        name: "Фитнес клуб",
-        children: [
-            {
-                name: "Силовые тренировки",
-            },
-            {
-                name: "Аэробика",
-            },
-            {
-                name: "Аэробика 1",
-            },
-        ]
-    };
+$(function () {
 
-    $('#chart').orgchart({
-        'data' : data,
-        'nodeContent': 'title',
-        'pan': true,
-        'zoom': true
+    // инициализация isotope
+    var $grid = $('.work-cards').isotope({
+        itemSelector: '.work-card',
+        layoutMode: 'fitRows', // можно masonry
+        transitionDuration: '0.4s' // плавность
+    });
+
+    // обработчик кликов по вкладкам
+    $('.work-tab__item').on('click', function () {
+        $('.work-tab__item').removeClass('active');
+        $(this).addClass('active');
+
+        var filterValue = $(this).attr('data-filter');
+        $grid.isotope({filter: filterValue});
+        $('#workSelect').val(filterValue);
+    });
+    $('#workSelect').on('change', function () {
+        console.log('changed')
+        var filterValue = $(this).val();
+        $grid.isotope({filter: filterValue});
+        $('.work-tab__item').removeClass('active');
+        $('.work-tab__item[data-filter="' + filterValue + '"]').addClass('active');
+    });
+    $(".work .custom-select .select-items__items div").on("click", function () {
+        const index = $(this).data("value"); // или getAttribute('data-value')
+        // stepItem(index);
+        console.log(index)
+        var filterValue = $('.work-tab__item').eq(index).attr('data-filter');
+        console.log(filterValue)
+        $grid.isotope({filter: filterValue});
     });
 });
 

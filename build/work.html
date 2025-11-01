@@ -532,206 +532,206 @@
         <section class="section work">
             <div class="wrapper">
                 <div class="work-tab">
-                    <div class="work-tab__item active">Все проекты</div>
-                    <div class="work-tab__item">Разработка сайтов</div>
-                    <div class="work-tab__item">Маркетинг</div>
-                    <div class="work-tab__item">Индивидуальный дизайн</div>
-                    <div class="work-tab__item">На шаблоне Аспро</div>
-                    <div class="work-tab__item">Интеграции</div>
-                    <div class="work-tab__item">Переезд на Битрикс</div>
-                    <div class="work-tab__item">Оптимизация</div>
+                    <div class="work-tab__item active" data-filter="*">Все проекты</div>
+                    <div class="work-tab__item" data-filter=".site">Разработка сайтов</div>
+                    <div class="work-tab__item" data-filter=".marketing">Маркетинг</div>
+                    <div class="work-tab__item" data-filter=".design">Индивидуальный дизайн</div>
+                    <div class="work-tab__item" data-filter=".aspro">На шаблоне Аспро</div>
+                    <div class="work-tab__item" data-filter=".integrations">Интеграции</div>
+                    <div class="work-tab__item" data-filter=".bitrix">Переезд на Битрикс</div>
+                    <div class="work-tab__item" data-filter=".optimize">Оптимизация</div>
                 </div>
                 <div class="custom-select off-submit">
-                    <select>
-                        <option value="0">Все проекты</option>
-                        <option value="1">Разработка сайтов</option>
-                        <option value="2">Маркетинг</option>
-                        <option value="3">Индивидуальный дизайн</option>
-                        <option value="4">На шаблоне Аспро</option>
-                        <option value="5">Интеграции</option>
-                        <option value="6">Переезд на Битрикс</option>
-                        <option value="7">Оптимизация</option>
+                    <select id="workSelect">
+                        <option value="*">Все проекты</option>
+                        <option value=".site">Разработка сайтов</option>
+                        <option value=".marketing">Маркетинг</option>
+                        <option value=".design">Индивидуальный дизайн</option>
+                        <option value=".aspro">На шаблоне Аспро</option>
+                        <option value=".integrations">Интеграции</option>
+                        <option value=".bitrix">Переезд на Битрикс</option>
+                        <option value=".optimize">Оптимизация</option>
                     </select>
                 </div>
 
                 <div class="work-cards">
-                    <div class="work-card" style="background: #4c5bec;">
+                    <div class="work-card site integrations" style="background: #4c5bec;">
                         <div class="work-card__title">Интернет-магазин <br> акционных товаров</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-1.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #000;">
+                    <div class="work-card marketing" style="background: #000;">
                         <div class="work-card__title">Интернет-магазин техники ZDQMarket</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-2.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #ee183e;">
+                    <div class="work-card site optimize" style="background: #ee183e;">
                         <div class="work-card__title">Интернет-магазин бытовой техники Jacky's</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-3.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #4cc6e8;">
+                    <div class="work-card bitrix marketing" style="background: #4cc6e8;">
                         <div class="work-card__title">Светлион</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-4.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #605e59;">
+                    <div class="work-card integrations marketing" style="background: #605e59;">
                         <div class="work-card__title">Интернет-магазин запчастей для квадроциклов</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-5.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #421620;">
+                    <div class="work-card site aspro" style="background: #421620;">
                         <div class="work-card__title">Сайт для салона антикварного магазина</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-6.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #a9be3e;">
+                    <div class="work-card design" style="background: #a9be3e;">
                         <div class="work-card__title">Сайт мебельной фабрики</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-7.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #dc7601;">
+                    <div class="work-card marketing" style="background: #dc7601;">
                         <div class="work-card__title">Сайт пансионата для пожилых людей</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-8.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #ef6518;">
+                    <div class="work-card site" style="background: #ef6518;">
                         <div class="work-card__title">Сайт интернет-магазина мотоэкипировки</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-9.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #ef5dbe;">
+                    <div class="work-card integrations " style="background: #ef5dbe;">
                         <div class="work-card__title">Интернет-магазин тканей и фурнитуры</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-10.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #0789c2;">
+                    <div class="work-card integrations  site" style="background: #0789c2;">
                         <div class="work-card__title">Сайт товаров и услуг систем мониторинга транспорта</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-11.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #c3c290;">
+                    <div class="work-card integrations  aspro" style="background: #c3c290;">
                         <div class="work-card__title">Интернет-магазин элитной итальянской сантехники</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-12.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #3ad3d4;">
+                    <div class="work-card aspro" style="background: #3ad3d4;">
                         <div class="work-card__title">Интернет-магазин итальянской элитной мебели</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-13.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #fd7a2b;">
+                    <div class="work-card site" style="background: #fd7a2b;">
                         <div class="work-card__title">Сайт для такелажной компании</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-14.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #d03533;">
+                    <div class="work-card integrations" style="background: #d03533;">
                         <div class="work-card__title">Интернет-магазин товаров для маникюра и педикюра</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-15.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #29569c;">
+                    <div class="work-card integrations" style="background: #29569c;">
                         <div class="work-card__title">Интернет-магазин средств и оборудования для дезинфекции</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-16.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #992e4d;">
+                    <div class="work-card integrations" style="background: #992e4d;">
                         <div class="work-card__title">Интернет-магазин лекарств и товаров для здоровья</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-17.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #2a7edc;">
+                    <div class="work-card site" style="background: #2a7edc;">
                         <div class="work-card__title">Сайт для компании «Центр санитарных экспертиз»</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-18.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #c90326;">
+                    <div class="work-card integrations design" style="background: #c90326;">
                         <div class="work-card__title">Сайт для компании, занимающейся
                             климатическим оборудованием</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-19.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #cf604a;">
+                    <div class="work-card integrations design" style="background: #cf604a;">
                         <div class="work-card__title">Сайт компании, обслуживающей кассовое оборудование</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-20.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #406b7a;">
+                    <div class="work-card  integrations site" style="background: #406b7a;">
                         <div class="work-card__title">Alter Ego</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-21.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #6a1755;">
+                    <div class="work-card integrations site" style="background: #6a1755;">
                         <div class="work-card__title">Сайт интернет-магазина мебели</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-22.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #b33328;">
+                    <div class="work-card aspro site" style="background: #b33328;">
                         <div class="work-card__title">Сайт интернет-магазина бытовой техники</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-23.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #199fdb;">
+                    <div class="work-card integrations site" style="background: #199fdb;">
                         <div class="work-card__title">Сайт магазина GoPro</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-24.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #02a5f0;">
+                    <div class="work-card site" style="background: #02a5f0;">
                         <div class="work-card__title">Бизнес-сувениры</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-25.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #68943a;">
+                    <div class="work-card design" style="background: #68943a;">
                         <div class="work-card__title">Сайт ландшафтного дизайна</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-26.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #4a9423;">
+                    <div class="work-card  integrations aspro" style="background: #4a9423;">
                         <div class="work-card__title">Сайт профессиональной косметики</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-27.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #1e2a41;">
+                    <div class="work-card  integrations aspro site" style="background: #1e2a41;">
                         <div class="work-card__title">Интернет магазин Печи Камины</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-28.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #d0a100;">
+                    <div class="work-card aspro design" style="background: #d0a100;">
                         <div class="work-card__title">Сайт турфирмы
                             на немецком языке</div>
                         <div class="work-card__img">
                             <img src="/img/work-card/card-29.jpg" alt="card">
                         </div>
                     </div>
-                    <div class="work-card" style="background: #1194b6;">
+                    <div class="work-card site" style="background: #1194b6;">
                         <div class="work-card__title">Сайт турфирмы
                             на немецком языке</div>
                         <div class="work-card__img">

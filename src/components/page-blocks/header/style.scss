@@ -102,7 +102,9 @@
       display: flex;
       align-items: center;
       justify-content: center;
-
+      @media screen and (max-width: 750px) {
+      flex-direction: column;
+      }
       &:hover,
       &.active {
         .header-menu__link {
@@ -120,6 +122,10 @@
       @media screen and (max-width: 750px) {
 
         position: relative;
+        height: auto;
+        align-items: flex-start;
+        justify-content: flex-start;
+        width: 100%;
         &::before {
           content: '';
           position: absolute;
@@ -128,6 +134,9 @@
           background: rgba(255, 255, 255, 0.4);
           bottom: 0;
           left: 0;
+          .sub-menu{
+            display: none !important;
+          }
         }
       }
     }
