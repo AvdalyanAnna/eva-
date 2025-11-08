@@ -3318,6 +3318,14 @@
       }
     }
   }
+  @media screen and (max-width: 750px) {
+    .pricing__cards {
+      justify-content: center;
+    }
+    .pricing__card {
+    max-width: 500px !important;
+    }
+  }
   @media screen and (max-width: 600px) {
     .pricing__cards {
       flex-wrap: nowrap;
@@ -3328,7 +3336,7 @@
       .pricing__card {
         max-width: 343px;
         width: 100%;
-        margin-bottom: 30px;
+        //margin-bottom: 30px;
       }
     }
   }

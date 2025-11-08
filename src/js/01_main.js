@@ -212,24 +212,27 @@ $(function () {
     }
 
     $(".steps-item").on('click', function () {
-        const $this = $(this),
-            item = $this.data('item')
-        // stepItem(item, $this)
-        // console.log($this,'$this')
-        const parent = $this.parent($this.parent('parent')),
-            show = $this.data('show')
-        console.log(show, 'show')
-        console.log(item, 'item')
-        console.log($(parent), '$(parent)')
-        console.log($(parent).find(".steps-item"))
+        const $this = $(this);
+        const item = $this.data('item');
+        const show = $this.data('show');
+        const parent = $this.closest($this.data('parent')); // 🔹 исправлено
+
+        console.log(show, 'show');
+        console.log(item, 'item');
+        console.log(parent, 'parent');
+        console.log(parent.find(".steps-item"));
+
         if ($this.hasClass('active')) return false;
-        $(parent).find(".steps-item").removeClass('active')
-        $(parent).find(".steps-item").eq(item).toggleClass('active')
-        $(parent).find(show).slideUp(300)
-        $(parent).find(show).eq(item).slideDown(300)
-        console.log($(parent).find(show).eq(item), 'test item')
-        console.log($(parent).find(show))
-    })
+
+        parent.find(".steps-item").removeClass('active');
+        $this.addClass('active'); // 🔹 активируем текущий
+
+        parent.find(show).slideUp(300);
+        parent.find(show).eq(item).slideDown(300);
+
+        console.log(parent.find(show).eq(item), 'test item');
+        console.log(parent.find(show));
+    });
 
     $(".steps-section .custom-select .select-items__items div").on("click", function () {
         const index = $(this).data("value"); // или getAttribute('data-value')
@@ -354,14 +357,29 @@ $(function () {
         // });
         $('.header .sub-menu__item-title').on('click', function (e) {
             e.preventDefault();
+            console.log(2222)
             $(this).parent().toggleClass('active')
                 .find('.sub-menu__item-list').stop(true, true).slideToggle();
         });
-        $(' .sub-menu__item-title').on('click', function (e) {
+        $('.sub-menu__item-title').on('click', function (e) {
+
+
+            const $this = $(this);
+            console.log($this,$this.attr('data-clicked'), '$this')
+            if ($this.attr('data-clicked')) return;
             e.preventDefault();
-            $(this).parent().toggleClass('active')
-                .find('.sub-menu__item-list').stop(true, true).slideToggle();
+            $this.attr('data-clicked', true);
+
+            $this.parent().toggleClass('active')
+                .find('.sub-menu__item-list')
+                .stop(true, true)
+                .slideToggle(300, function() {
+                    // Сбрасываем флаг после анимации
+                    $this.data('clicked', false);
+                });
         });
+
+
     } else {
         // Десктоп — по наведению
         $('.has-sub__menu').on('mouseenter', function () {
@@ -413,6 +431,13 @@ $(function () {
         console.log(filterValue)
         $grid.isotope({filter: filterValue});
     });
+
+    $('.pricing__card__list-item-more').on('click', function (e) {
+        e.preventDefault();
+        const parent = $(this).parent()
+        parent.find('.pricing__card__list-item').removeClass('pricing__card__list-item-hidden')
+        $(this).remove();
+    })
 });
 
 

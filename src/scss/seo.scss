@@ -565,6 +565,9 @@
   .pricing__card-infos {
     gap: 12px;
     height: 185px;
+    @media screen and (max-width: 600px){
+      height: auto;
+    }
 
     &::before {
       content: unset;
