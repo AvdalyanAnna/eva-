@@ -438,6 +438,11 @@ $(function () {
         parent.find('.pricing__card__list-item').removeClass('pricing__card__list-item-hidden')
         $(this).remove();
     })
+
+    $('.sidebar-nav-active').on('click', function (e) {
+        e.preventDefault();
+        $('.sidebar-nav-list').toggleClass('open');
+    })
 });
 
 

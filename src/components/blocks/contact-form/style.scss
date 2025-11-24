@@ -180,6 +180,11 @@
 
   &__input {
     display: none;
+
+    &:checked + .checkbox:before {
+      background-color: var(--eb0e54);
+      border-color: var(--eb0e54);
+    }
   }
 
   &:before {

@@ -34,6 +34,18 @@
     }
 
   }
+
+  &-border {
+    background: transparent;
+    color: var(--24272e);
+    border: 2px solid var(--eb0e54);
+    &:hover{
+      border-color: #fff;
+      background: var(--eb0e54);
+      color: var(--ffffff);
+    }
+
+  }
 }
 
 .swiper {
