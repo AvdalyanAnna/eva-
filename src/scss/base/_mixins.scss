@@ -66,20 +66,27 @@
 @mixin underline-hover($color: var(--eb0e54)) {
   cursor: pointer;
   position: relative;
-
-  &::before {
-    content: '';
-    position: absolute;
-    height: 1px;
-    width: 0;
-    background: $color;
-    transition: var(--transition);
-    left: 0;
-    bottom: 0;
-  }
-
-  &:hover::before {
-    width: 100%;
+  text-decoration: none;
+  background-image: linear-gradient($color, $color);
+  background-position: 0% 100%;
+  background-repeat: no-repeat;
+  background-size: 0 1.5px;
+  transition: background-size .4s;
+  padding-bottom: 2px;
+  //&::before {
+  //  content: '';
+  //  position: absolute;
+  //  height: 1px;
+  //  width: 0;
+  //  background: $color;
+  //  transition: var(--transition);
+  //  left: 0;
+  //  bottom: 0;
+  //}
+  //
+  &:hover {
+    text-decoration: none;
+    background-size: 100% 1.5px;
   }
 }
 

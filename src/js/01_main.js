@@ -1,6 +1,5 @@
 $(function () {
     function stepItem(index) {
-        console.log(index)
         const $this = $(".steps-item").eq(index),
             item = $this.data('item'),
             parent = $this.data('parent'),
@@ -10,7 +9,6 @@ $(function () {
         $(".steps-item").eq(item).toggleClass('active')
         $(parent).find(show).slideUp(300)
         $(parent).find(show).eq(item).slideDown(300)
-        console.log($(parent).find(show))
     }
 })
 
@@ -188,27 +186,19 @@ $(function () {
         const $this = $(this),
             parent = $this.data('parent'),
             show = $this.data('show')
-        console.log(parent, show)
         $this.parent(parent).toggleClass('active')
         $this.parent(parent).children(show).slideToggle(300)
     })
 
     function stepItem(index, $this) {
-        console.log($this, '$this')
         const item = $this.data('item'),
             parent = $this.data('parent'),
             show = $this.data('show')
-        console.log(show, 'show')
-        console.log(item, 'item')
-        console.log($(parent), '$(parent)')
-        console.log($(parent).find(".steps-item"))
         if ($this.hasClass('active')) return false;
         $(parent).find(".steps-item").removeClass('active')
         $(parent).find(".steps-item").eq(item).toggleClass('active')
         $(parent).find(show).slideUp(300)
         $(parent).find(show).eq(item).slideDown(300)
-        console.log($(parent).find(show).eq(item), 'test item')
-        console.log($(parent).find(show))
     }
 
     $(".steps-item").on('click', function () {
@@ -217,10 +207,6 @@ $(function () {
         const show = $this.data('show');
         const parent = $this.closest($this.data('parent')); // 🔹 исправлено
 
-        console.log(show, 'show');
-        console.log(item, 'item');
-        console.log(parent, 'parent');
-        console.log(parent.find(".steps-item"));
 
         if ($this.hasClass('active')) return false;
 
@@ -230,8 +216,6 @@ $(function () {
         parent.find(show).slideUp(300);
         parent.find(show).eq(item).slideDown(300);
 
-        console.log(parent.find(show).eq(item), 'test item');
-        console.log(parent.find(show));
     });
 
     $(".steps-section .custom-select .select-items__items div").on("click", function () {
@@ -278,10 +262,7 @@ $(function () {
             [0, 5000, 10000, 15000],
             [0, 10000, 15000, 20000],
         ]
-        console.log(prices[step - 1][index])
-        console.log(price)
         price = price + prices[step - 1][index]
-        console.log(price)
 
         $('.calculator__right-price span').html(price.toLocaleString('ru-RU'))
 
@@ -357,7 +338,6 @@ $(function () {
         // });
         $('.header .sub-menu__item-title').on('click', function (e) {
             e.preventDefault();
-            console.log(2222)
             $(this).parent().toggleClass('active')
                 .find('.sub-menu__item-list').stop(true, true).slideToggle();
         });
@@ -365,7 +345,6 @@ $(function () {
 
 
             const $this = $(this);
-            console.log($this,$this.attr('data-clicked'), '$this')
             if ($this.attr('data-clicked')) return;
             e.preventDefault();
             $this.attr('data-clicked', true);
@@ -417,7 +396,6 @@ $(function () {
         $('#workSelect').val(filterValue);
     });
     $('#workSelect').on('change', function () {
-        console.log('changed')
         var filterValue = $(this).val();
         $grid.isotope({filter: filterValue});
         $('.work-tab__item').removeClass('active');
@@ -426,10 +404,16 @@ $(function () {
     $(".work .custom-select .select-items__items div").on("click", function () {
         const index = $(this).data("value"); // или getAttribute('data-value')
         // stepItem(index);
-        console.log(index)
         var filterValue = $('.work-tab__item').eq(index).attr('data-filter');
-        console.log(filterValue)
         $grid.isotope({filter: filterValue});
+    });
+    $(".license-1c-tabs-select.custom-select .select-items__items div").on("click", function () {
+        const index = $(this).data("value"); // или getAttribute('data-value')
+        // stepItem(index);
+        $('.steps-content__item').eq(index).show().siblings().hide();
+        var filterValue = $('.license-1c-tabs-inner .steps-item').eq(index);
+        console.log(filterValue,'log');
+        // $grid.isotope({filter: filterValue});
     });
 
     $('.pricing__card__list-item-more').on('click', function (e) {
