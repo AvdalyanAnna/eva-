@@ -274,6 +274,7 @@
     background: var(--9f0033);
 
     .section-header-relative-col .title::before,
+    .section-header-relative-col .title-before::before,
     .line-y::before {
       background: var(--dfb48f);
     }
@@ -516,7 +517,7 @@
           padding-top: 34px;
           padding-left: 21px;
         }
-
+.title-before,
         .title {
           position: relative;
 
