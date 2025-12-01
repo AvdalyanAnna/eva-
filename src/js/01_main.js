@@ -1,3 +1,4 @@
+
 $(function () {
     function stepItem(index) {
         const $this = $(".steps-item").eq(index),
@@ -431,3 +432,6 @@ $(function () {
 
 
 
+$(document).ready(function(){
+    $('.phone').mask('+7 (000) 000-00-00');
+});

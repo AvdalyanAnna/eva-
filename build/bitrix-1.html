@@ -26,10 +26,6 @@
 	
 </head>
 
-<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-<script src="js/libs.min.js"></script>
-<script src="js/main.min.js"></script>
-
 
 <body>
 <div class="page">
@@ -462,7 +458,7 @@
                         <input type="text" placeholder="Ваше имя*">
                     </div>
                     <div class="modal-form__item">
-                        <input type="text" placeholder="Телефон*">
+                        <input class="phone" type="text" placeholder="Телефон*">
                     </div>
                     <div class="modal-form__item">
                         <input type="text" placeholder="E-mail">
@@ -840,7 +836,7 @@
                         <div class="contact-form__top-inner">
                             <div class="contact-form__input-group">
                                 <input type="text" id="name" name="name" placeholder="Телефон"
-                                       class="contact-form__input" required>
+                                       class="contact-form__input phone" required>
                             </div>
                             <div class="contact-form__input-group">
                                 <input type="email" id="email" name="email" placeholder="Как вас зовут?"
@@ -972,6 +968,13 @@
 </footer>
 
 </div>
+<script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+
+<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+
+
 </body>
 
 </html>
