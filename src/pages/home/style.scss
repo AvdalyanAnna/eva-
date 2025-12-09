@@ -556,6 +556,7 @@
     user-select: none;
     pointer-events: none;
     z-index: 0;
+
     @media screen and (max-width: 600px) {
       height: 200px;
       min-width: 591px;
@@ -565,23 +566,28 @@
         height: 100%;
         width: 100%;
       }
+    }
 
-    }
-    &.no-hover{
-      display: block;
-    }
-    &.hover{
-      display: none;
-    }
     img {
       user-select: none;
       pointer-events: none;
+
     }
   }
 
   .wrapper {
     position: relative;
     z-index: 99;
+  }
+  &__logo{
+    object-fit: cover;
+    filter: grayscale(100%);   /* делаем серой */
+    transition: filter .4s ease, transform .4s ease;
+cursor: pointer;
+    &:hover{
+      filter: grayscale(0);   /* делаем серой */
+
+    }
   }
 
   &__list {
@@ -602,11 +608,7 @@
       padding: 31px 0 40px;
     }
   }
-  &__logo{
-    &.hover{
-      display: none;
-    }
-  }
+
   &__item {
     display: flex;
     align-items: center;
@@ -614,19 +616,7 @@
     @media screen and (max-width: 600px) {
       max-width: 42%;
     }
-    &:hover{
-    .clients__logo{
-      cursor: pointer;
-      &.hover{
-        display: block;
-      }
-        &.no-hover{
-            display: none;
-        }
-    }
   }
-  }
-
 }
 
 

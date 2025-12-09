@@ -2899,6 +2899,30 @@ textarea {
       }
     }
   }
+  &-inner{
+    p{
+      font-family: var(--font-family);
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 1;
+    }
+    h3{
+      font-family: var(--font-family);
+      font-weight: 500;
+      font-size: 26px;
+      line-height: 120%;
+      text-transform: uppercase;
+      color: var(--eb0e54);
+      margin-top: 20px;
+      @media screen and (max-width: 1100px) {
+          font-size: 22px;
+          line-height: 120%;
+      }
+      @media screen and (max-width: 600px) {
+        margin-top: 10px;
+      }
+    }
+  }
 }
 
 .pagination{
@@ -2996,6 +3020,10 @@ textarea {
     flex-direction: column;
     gap: 10px;
     font-size: 16px;
+
+      @media screen and (max-width: 600px) {
+        gap: 5px;
+      }
     li{
       padding-left: 40px;
       position: relative;
