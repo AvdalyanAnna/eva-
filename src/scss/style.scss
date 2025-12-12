@@ -526,7 +526,7 @@ textarea {
         img {
           width: 100%;
           height: 100%;
-          object-fit: cover;
+          object-fit: contain;
         }
       }
     }
@@ -3076,4 +3076,26 @@ textarea {
   background-position: right;
   background-repeat: no-repeat;
   background-size: cover;
+}
+
+.services-page__item{
+  min-height: 300px;
+}
+
+.error {
+  border: 1px solid #d9534f !important;
+}
+
+.error-text {
+  color: #d9534f;
+  font-size: 13px;
+  margin-top: 4px;
+}
+
+.product__catalog-item__inner{
+  .product__catalog-big{
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+  }
 }

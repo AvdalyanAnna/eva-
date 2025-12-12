@@ -1070,22 +1070,22 @@
                 <p class="description">Оставьте свои контакты, мы вам перезвоним</p>
             </div>
             <div class="contact-form__right">
-                <form action="#" class="contact-form">
+                <form action="#" class="contact-form contact-form-validation">
                     <div class="contact-form__top">
                         <div class="contact-form__top-inner">
                             <div class="contact-form__input-group">
-                                <input type="text" id="name" name="name" placeholder="Телефон"
-                                       class="contact-form__input phone" required>
+                                <input type="text" id="phone" name="phone" placeholder="Телефон"
+                                       class="contact-form__input phone input-required" required>
                             </div>
                             <div class="contact-form__input-group">
-                                <input type="email" id="email" name="email" placeholder="Как вас зовут?"
-                                       class="contact-form__input" required>
+                                <input type="text" name="name" placeholder="Как вас зовут?"
+                                       class="contact-form__input input-required" required>
                             </div>
                         </div>
                         <button type="submit" class="btn btn-primary">Отправить</button>
                     </div>
                     <div class="contact-form__checkbox-group">
-                        <input type="checkbox" name="subscribe" id="subscribe" class="checkbox__input">
+                        <input type="checkbox" name="subscribe" id="subscribe" class="checkbox__input input-required">
 
                         <label for="subscribe" class="checkbox">
                             <span class="checkbox__label">Я согласен на <a href="#" class="link">обработку персональных данных</a></span>
@@ -1209,6 +1209,8 @@
 </div>
 <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.mask/1.14.15/jquery.mask.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
 
 <script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>

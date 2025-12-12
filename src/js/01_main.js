@@ -430,8 +430,211 @@ $(function () {
     })
 });
 
-
-
-$(document).ready(function(){
+$(document).ready(function () {
+    // Маска телефона
     $('.phone').mask('+7 (000) 000-00-00');
+
+    const form = $('.modal-form');
+
+    // Универсальная функция вывода ошибки
+    function showError(field, message) {
+        field.addClass('error');
+        field.parent().find('.error-text').remove();
+        field.parent().append('<div class="error-text">' + message + '</div>');
+    }
+
+    // Удаление ошибки
+    function clearError(field) {
+        field.removeClass('error');
+        field.parent().find('.error-text').remove();
+    }
+
+    // Функция проверки одного поля
+    function validateField(field) {
+        const placeholder = field.attr('placeholder');
+        const value = $.trim(field.val());
+
+        // ФИО
+        if (placeholder === 'Ваше имя*') {
+            const fioRegex = /^[A-Za-zА-Яа-яЁё\s-]+$/;
+            if (!fioRegex.test(value)) {
+                showError(field, 'Введите имя и фамилию.');
+                return false;
+            }
+        }
+
+        // Телефон
+        if (field.hasClass('phone')) {
+            if (value.length < 18) {
+                showError(field, 'Введите корректный телефон.');
+                return false;
+            }
+        }
+
+        // Email
+        if (placeholder === 'E-mail' && value !== '') {
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(value)) {
+                showError(field, 'Некорректный e-mail.');
+                return false;
+            }
+        }
+
+        // Услуга
+        if (placeholder === 'Услуга*') {
+            if (!value) {
+                showError(field, 'Укажите услугу.');
+                return false;
+            }
+        }
+
+        clearError(field);
+        return true;
+    }
+
+    // Валидация чекбокса
+    function validateCheckbox(cb) {
+        if (!cb.is(':checked')) {
+            showError(cb, 'Необходимо согласие.');
+            return false;
+        }
+        clearError(cb);
+        return true;
+    }
+
+    // Валидация при blur
+    form.find('input, textarea').on('blur input', function () {
+        if ($(this).attr('name') === 'subscribe') return;
+        validateField($(this));
+    });
+
+    form.find('input[name="name"]').on('change', function () {
+        validateCheckbox($(this));
+    });
+
+    // Валидация при submit
+    form.on('submit', function (e) {
+        e.preventDefault();
+
+        let isValid = true;
+
+        form.find('input:not([type="checkbox"]), textarea').each(function () {
+            if (!validateField($(this))) isValid = false;
+        });
+
+        if (!validateCheckbox(form.find('input[name="subscribe"]'))) isValid = false;
+
+        if (isValid) this.submit();
+    });
 });
+
+
+$(document).ready(function () {
+
+    // Запускаем валидацию только для форм с классом contact-form-validation
+    $('.contact-form-validation').each(function () {
+
+        const form = $(this);
+
+        // Маска телефона
+        form.find('.phone').mask('+7 (000) 000-00-00');
+
+        function showError(field, message) {
+            field.addClass('error');
+            field.parent().find('.error-text').remove();
+            field.parent().append('<div class="error-text">' + message + '</div>');
+        }
+
+        function clearError(field) {
+            field.removeClass('error');
+            field.parent().find('.error-text').remove();
+        }
+
+        function validateField(field) {
+            const name = field.attr('name');
+            const value = $.trim(field.val());
+
+            // Телефон
+            if (name === 'phone') {
+                if (value.length < 18) {
+                    showError(field, 'Введите корректный номер телефона.');
+                    return false;
+                }
+            }
+
+            // Имя
+            if (name === 'name') {
+                const fioRegex = /^[A-Za-zА-Яа-яЁё\s-]+$/;
+                if (!fioRegex.test(value)) {
+                    showError(field, 'Используйте только буквы.');
+                    return false;
+                }
+            }
+
+            clearError(field);
+            return true;
+        }
+
+        function validateCheckbox(cb) {
+            if (!cb.is(':checked')) {
+                showError(cb, 'Необходимо согласие.');
+                return false;
+            }
+            clearError(cb);
+            return true;
+        }
+
+        // blur + input проверка
+        form.find('input[type="text"], input[type="email"]').on('blur input', function () {
+            validateField($(this));
+        });
+
+        // чекбокс
+        form.find('input[name="subscribe"]').on('change', function () {
+            validateCheckbox($(this));
+        });
+
+        // submit проверка
+        form.on('submit', function (e) {
+            e.preventDefault();
+
+            let isValid = true;
+
+            form.find('.input-required').each(function () {
+                if (!validateField($(this))) isValid = false;
+            });
+
+            if (!validateCheckbox(form.find('input[name="subscribe"]'))) isValid = false;
+
+            if (isValid) {
+                this.submit();
+            }
+        });
+
+    });
+
+});
+
+window.onload = () => {
+    gsap.registerPlugin(ScrollTrigger);
+
+    if (window.matchMedia("(max-width: 900px)").matches) {
+        return;
+    }else{
+
+    document.querySelectorAll(".product__catalog-item__inner").forEach((item) => {
+
+        const small = item.querySelector(".product__catalog-small");
+
+        ScrollTrigger.create({
+            trigger: item,
+            start: "top top",
+            end: "bottom+=400 bottom",
+            pin: small,
+            pinSpacing: false,
+        });
+
+    });
+    }
+
+}

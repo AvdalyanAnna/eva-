@@ -1018,9 +1018,16 @@
   }
 
   &-small {
+   @media screen and (max-width: 900px) {
+     display: flex;
+     align-items: center;
+     justify-content: center;
+   }
     &__img {
-      position: sticky;
-      top: 0;
+      //position: sticky;
+      //top: 0;
+      position: relative;
+      top: auto;
       img {
         border-radius: 12px;
         @media screen and (max-width: 900px) {
@@ -3045,7 +3052,7 @@ span{
 
 .product__catalog{
   position: relative;
-  //overflow: hidden;
+  overflow: hidden;
   background: #252730;
   &-money{
     position: absolute;
